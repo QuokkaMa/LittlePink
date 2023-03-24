@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0096F652-EB51-4904-B478-FCC7FA2141CE"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A245E938-E0FE-4236-AE60-F4DA2CA8FBC6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../LittlePink-&#x4ee3;&#x7801;&#x6c47;&#x603b;/iOS14+Swift5.3&#x4eff;&#x5c0f;&#x7ea2;&#x4e66;&#x5b9e;&#x6218;&#x6559;&#x7a0b;(&#x7d20;&#x6750;)/6-&#x7011;&#x5e03;&#x6d41;&#x5e03;&#x5c40;-Collectionview&#x7684;&#x81ea;&#x5b9a;&#x4e49;Layout(&#x7d20;&#x6750;)/6-6&#x7d20;&#x6750;/LittlePink-&#x7b2c;6&#x7ae0;&#x5b8c;&#x6210;&#x7248;-&#x82e5;&#x65e0;&#x6cd5;&#x8fd0;&#x884c;,&#x8bf7;&#x5728;&#x7ec8;&#x7aef;&#x5148;&#x8f93;pod repo update&#x518d;&#x8f93;pod update(M1&#x7535;&#x8111;&#x524d;&#x9762;&#x9700;&#x52a0;arch -x86_64)/LittlePink/WaterfallCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "WaterfallCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
