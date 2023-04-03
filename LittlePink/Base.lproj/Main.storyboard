@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mls-JQ-4VZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mls-JQ-4VZ">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -196,6 +196,8 @@
                                                 <connections>
                                                     <outlet property="dataSource" destination="mls-JQ-4VZ" id="9cf-pM-4FY"/>
                                                     <outlet property="delegate" destination="mls-JQ-4VZ" id="5Zq-4X-Qm2"/>
+                                                    <outlet property="dragDelegate" destination="mls-JQ-4VZ" id="9WI-nA-BCT"/>
+                                                    <outlet property="dropDelegate" destination="mls-JQ-4VZ" id="pw8-fz-AV6"/>
                                                 </connections>
                                             </collectionView>
                                         </subviews>

@@ -49,15 +49,23 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             config.gallery.hidesRemoveButton = false //每个照片或视频右上方是否有删除按钮
             let picker = YPImagePicker(configuration: config)
             
-            picker.didFinishPicking { [unowned picker] items, _ in
-//                if let photo = items.singlePhoto {
-//                    print(photo.fromCamera) // Image source (camera or library)
-//                    print(photo.image) // Final image selected by the user
-//                    print(photo.originalImage) // original image selected by the user, unfiltered
-//                }
+            picker.didFinishPicking { [unowned picker] items, cancelled in
                 
+                if cancelled {
+                    // 用户按了左上角的取消按钮
+                }
                 
-//                picker.pushViewController(NoteEditVC, animated: true)
+                for item in items {
+                    switch item{
+                    case let .photo(photo):
+                        print(photo)
+                    case .video(let video):
+                        print(video)
+                    }
+                    
+                }
+                
+
                 picker.dismiss(animated: true)
             }
             present(picker, animated: true)

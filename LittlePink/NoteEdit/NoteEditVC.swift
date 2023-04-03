@@ -7,14 +7,19 @@
 
 import UIKit
 import YPImagePicker
+import SKPhotoBrowser
+import AVKit
 
 class NoteEditVC: UIViewController {
 
     var photos = [
-        UIImage(named: "1"),UIImage(named: "2"),UIImage(named: "3")
+        UIImage(named: "1")!,UIImage(named: "2")!
     ]
+    var videoUrl:URL?
+//    var videoUrl:URL = Bundle.main.url(forResource: "testVideo", withExtension: "mp4")!
     
     @IBOutlet weak var photoCollectionview: UICollectionView!
+    var isVideo: Bool{ videoUrl != nil}
     
     var photoCount: Int{ photos.count }
     override func viewDidLoad() {
@@ -51,9 +56,47 @@ extension NoteEditVC: UICollectionViewDataSource{
     
 }
 
+// MARK: - UICollectionViewDelegate
 extension NoteEditVC: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if isVideo {
+            // 点击编辑界面的视频,进行预览
+            let playerVC = AVPlayerViewController()
+            playerVC.player = AVPlayer(url: videoUrl!)
+            present(playerVC, animated: true){
+                playerVC.player?.play()
+            }
+        } else {
+            // 点击编辑界面的图片,进行放大
+            // 1. create SKPhoto Array from UIImage
+            var images = [SKPhoto]()
+            for photo in photos {
+                images.append(SKPhoto.photoWithImage(photo))
+            }
+            
+            // 2. create PhotoBrowser Instance, and present from your viewController.
+            let browser = SKPhotoBrowser(photos: images, initialPageIndex: indexPath.item)
+            browser.delegate = self
+            SKPhotoBrowserOptions.displayAction = false
+            SKPhotoBrowserOptions.displayDeleteButton = true
+            present(browser, animated: true)
+        }
+    }
+}
+
+// MARK: - SKPhotoBrowserDelegate
+extension NoteEditVC: SKPhotoBrowserDelegate{
+    func removePhoto(_ browser: SKPhotoBrowser, index: Int, reload: @escaping (() -> Void)) {
+        photos.remove(at: index)
+        // 点击编辑界面图片内容刷新
+        photoCollectionview.reloadData()
+        // SKPhotoBrowserDelegate 内容刷新
+        reload()
+    }
     
 }
+
 
 // MARK: - 监听
 extension NoteEditVC{
@@ -90,8 +133,7 @@ extension NoteEditVC{
             
             present(picker, animated: true)
         }else{
-            print("不能再选了")
-            
+            showTextHUD("最多只能选择\(kMaxPhotoCount)张照片哦")
         }
     }
     
