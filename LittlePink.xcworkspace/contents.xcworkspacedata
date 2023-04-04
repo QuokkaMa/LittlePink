@@ -5,9 +5,6 @@
       location = "group:LittlePink.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/quokka/Desktop/LittlePink/README.md">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
