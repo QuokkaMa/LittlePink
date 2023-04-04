@@ -35,6 +35,14 @@ class NoteEditVC: UIViewController {
         photoCollectionview.dragInteractionEnabled = true
         // 点击空白处 收回键盘
         hideKeyboardWhenTappedAround()
+        // 初始化标题最大数字
+        titleCountLable.text = "\(KMaxNoteTitleCount)"
+        
+        // 设置文本框内边距
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        textView.textContainer.lineFragmentPadding = 0
+        
+         
     }
     
     
@@ -46,6 +54,10 @@ class NoteEditVC: UIViewController {
         titleCountLable.isHidden = true
     }
     
+    @IBAction func TFEditChanged(_ sender: Any) {
+        titleCountLable.text = "\(KMaxNoteTitleCount - titleTextField.unwrappedText.count)"
+        
+    }
     
     @IBAction func TFDidOnExit(_ sender: Any) {
         // 点击键盘 "完成: 收起小键盘 空方法即可
@@ -54,9 +66,22 @@ class NoteEditVC: UIViewController {
 
 
 extension NoteEditVC: UITextFieldDelegate{
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        // 点击键盘 "完成: 收起小键盘
-//        textField.resignFirstResponder()
-//        return true
-//    }
+    // 点击键盘 "完成: 收起小键盘
+    //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    //
+    //        textField.resignFirstResponder()
+    //        return true
+    //    }
+    
+    // 标题超过 20 戈文字进行拦截
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+ 
+        let isExceed = range.location >= KMaxNoteTitleCount || (textField.unwrappedText.count + string.count ) > KMaxNoteTitleCount
+        
+        if isExceed {
+            showTextHUD("标题最多输入\(KMaxNoteTitleCount)")
+        }
+        
+        return !isExceed
+    }
 }

@@ -7,6 +7,10 @@
 
 import UIKit
 
+extension UITextField{
+    var unwrappedText: String { text ?? "" }
+}
+
 extension UIView{
     
     // 在 storyboard 右侧添加 圆角 设置

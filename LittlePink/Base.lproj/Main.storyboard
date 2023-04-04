@@ -216,12 +216,13 @@
                                                                         <connections>
                                                                             <action selector="TFDidOnExit:" destination="mls-JQ-4VZ" eventType="editingDidEndOnExit" id="FXa-m6-bS0"/>
                                                                             <action selector="TFEditBegin:" destination="mls-JQ-4VZ" eventType="editingDidBegin" id="gP2-Vt-bxO"/>
+                                                                            <action selector="TFEditChanged:" destination="mls-JQ-4VZ" eventType="editingChanged" id="qdd-eS-c8P"/>
                                                                             <action selector="TFEditEnd:" destination="mls-JQ-4VZ" eventType="editingDidEnd" id="WsZ-60-jgI"/>
                                                                             <outlet property="delegate" destination="mls-JQ-4VZ" id="7vw-PV-FHz"/>
                                                                         </connections>
                                                                     </textField>
-                                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbL-TL-5Br">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
+                                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbL-TL-5Br">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="16"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                         <color key="textColor" systemColor="tertiaryLabelColor"/>
                                                                         <nil key="highlightedColor"/>

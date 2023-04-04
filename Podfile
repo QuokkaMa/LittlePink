@@ -24,6 +24,7 @@ target 'LittlePink' do
   pod 'MBProgressHUD', '~> 1.2.0'
   # 图片放大
   pod 'SKPhotoBrowser'
+#  pod 'KMPlaceholderTextView', '~> 1.4.0'
   
 end
 
