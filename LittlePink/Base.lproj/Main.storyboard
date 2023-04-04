@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -40,15 +39,15 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="wTY-pr-OdO"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="AFE-pN-mcl"/>
+                        <viewLayoutGuide key="safeArea" id="UHf-rD-M0k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="g54-W2-C3d" firstAttribute="trailing" secondItem="AFE-pN-mcl" secondAttribute="trailing" id="2nq-1Z-T9b"/>
-                            <constraint firstItem="g54-W2-C3d" firstAttribute="top" secondItem="AFE-pN-mcl" secondAttribute="top" id="6WE-L4-vz6"/>
-                            <constraint firstItem="g54-W2-C3d" firstAttribute="leading" secondItem="AFE-pN-mcl" secondAttribute="leading" id="M13-lh-N9D"/>
-                            <constraint firstItem="em8-Ni-fSy" firstAttribute="leading" secondItem="AFE-pN-mcl" secondAttribute="leading" id="O8q-HR-WMn"/>
-                            <constraint firstItem="em8-Ni-fSy" firstAttribute="trailing" secondItem="AFE-pN-mcl" secondAttribute="trailing" id="Rtg-dB-SLP"/>
-                            <constraint firstItem="em8-Ni-fSy" firstAttribute="bottom" secondItem="AFE-pN-mcl" secondAttribute="bottom" id="nMG-OV-WQV"/>
+                            <constraint firstItem="g54-W2-C3d" firstAttribute="trailing" secondItem="UHf-rD-M0k" secondAttribute="trailing" id="2nq-1Z-T9b"/>
+                            <constraint firstItem="g54-W2-C3d" firstAttribute="top" secondItem="UHf-rD-M0k" secondAttribute="top" id="6WE-L4-vz6"/>
+                            <constraint firstItem="g54-W2-C3d" firstAttribute="leading" secondItem="UHf-rD-M0k" secondAttribute="leading" id="M13-lh-N9D"/>
+                            <constraint firstItem="em8-Ni-fSy" firstAttribute="leading" secondItem="UHf-rD-M0k" secondAttribute="leading" id="O8q-HR-WMn"/>
+                            <constraint firstItem="em8-Ni-fSy" firstAttribute="trailing" secondItem="UHf-rD-M0k" secondAttribute="trailing" id="Rtg-dB-SLP"/>
+                            <constraint firstItem="em8-Ni-fSy" firstAttribute="bottom" secondItem="UHf-rD-M0k" secondAttribute="bottom" id="nMG-OV-WQV"/>
                             <constraint firstItem="em8-Ni-fSy" firstAttribute="top" secondItem="g54-W2-C3d" secondAttribute="bottom" id="ukI-SV-red"/>
                         </constraints>
                     </view>
@@ -69,7 +68,7 @@
                     <view key="view" contentMode="scaleToFill" id="uPL-MI-7Q7">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="XVV-fT-i1S"/>
+                        <viewLayoutGuide key="safeArea" id="D8U-Yc-SCM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="商城" image="cart.fill" catalog="system" id="czf-rq-TRo"/>
@@ -92,11 +91,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="lP0-lR-1IL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4zR-Pq-sge" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GYg-yq-7Kr"/>
-                            <constraint firstItem="4zR-Pq-sge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j9E-Tt-ojY"/>
+                            <constraint firstItem="4zR-Pq-sge" firstAttribute="centerX" secondItem="lP0-lR-1IL" secondAttribute="centerX" id="j9E-Tt-ojY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="plus.rectangle.fill" catalog="system" id="GFZ-Bn-oQ4"/>
@@ -139,7 +138,11 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
+<<<<<<< HEAD
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="zY3-br-0Cq">
+=======
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="zY3-br-0Cq">
+>>>>>>> parent of cafad06 (初始化)
                                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                                 </imageView>
                                                             </subviews>
@@ -168,9 +171,12 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                             <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+<<<<<<< HEAD
+=======
                                                             <state key="normal">
                                                                 <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
                                                             </state>
+>>>>>>> parent of cafad06 (初始化)
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                     <real key="value" value="10"/>
@@ -221,13 +227,13 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="b6k-r1-kDb"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Rnb-JR-4s5"/>
+                        <viewLayoutGuide key="safeArea" id="R2F-y9-CD3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="e1V-zG-e71" firstAttribute="leading" secondItem="Rnb-JR-4s5" secondAttribute="leading" id="4z2-lr-v7z"/>
+                            <constraint firstItem="e1V-zG-e71" firstAttribute="leading" secondItem="R2F-y9-CD3" secondAttribute="leading" id="4z2-lr-v7z"/>
                             <constraint firstAttribute="bottom" secondItem="e1V-zG-e71" secondAttribute="bottom" id="ABB-Fb-Ny5"/>
-                            <constraint firstItem="e1V-zG-e71" firstAttribute="top" secondItem="Rnb-JR-4s5" secondAttribute="top" id="cAU-Mg-Hv4"/>
-                            <constraint firstItem="e1V-zG-e71" firstAttribute="trailing" secondItem="Rnb-JR-4s5" secondAttribute="trailing" id="uky-un-l9R"/>
+                            <constraint firstItem="e1V-zG-e71" firstAttribute="top" secondItem="R2F-y9-CD3" secondAttribute="top" id="cAU-Mg-Hv4"/>
+                            <constraint firstItem="e1V-zG-e71" firstAttribute="trailing" secondItem="R2F-y9-CD3" secondAttribute="trailing" id="uky-un-l9R"/>
                         </constraints>
                     </view>
                     <connections>
@@ -245,7 +251,7 @@
                     <view key="view" contentMode="scaleToFill" id="jgd-Oc-Gh9">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="L72-yt-vXn"/>
+                        <viewLayoutGuide key="safeArea" id="arb-3C-kIU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="消息" image="message.fill" catalog="system" id="PBJ-0C-rWK"/>
@@ -261,7 +267,7 @@
                     <view key="view" contentMode="scaleToFill" id="dx8-26-rn9">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="l4A-Qb-zXZ"/>
+                        <viewLayoutGuide key="safeArea" id="brt-2C-na8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="我的" image="person.fill" catalog="system" id="g0P-Cg-7Gj"/>
@@ -321,15 +327,15 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="IhD-Lt-8K2"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="k6J-v1-QnI"/>
+                        <viewLayoutGuide key="safeArea" id="e9Y-qt-smg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gmI-r3-LfR" firstAttribute="trailing" secondItem="k6J-v1-QnI" secondAttribute="trailing" id="Aqs-wC-pst"/>
-                            <constraint firstItem="hSN-A5-RAj" firstAttribute="leading" secondItem="k6J-v1-QnI" secondAttribute="leading" id="FwG-JC-tbu"/>
-                            <constraint firstItem="gmI-r3-LfR" firstAttribute="leading" secondItem="k6J-v1-QnI" secondAttribute="leading" id="HyV-M3-ktN"/>
+                            <constraint firstItem="gmI-r3-LfR" firstAttribute="trailing" secondItem="e9Y-qt-smg" secondAttribute="trailing" id="Aqs-wC-pst"/>
+                            <constraint firstItem="hSN-A5-RAj" firstAttribute="leading" secondItem="e9Y-qt-smg" secondAttribute="leading" id="FwG-JC-tbu"/>
+                            <constraint firstItem="gmI-r3-LfR" firstAttribute="leading" secondItem="e9Y-qt-smg" secondAttribute="leading" id="HyV-M3-ktN"/>
                             <constraint firstItem="hSN-A5-RAj" firstAttribute="top" secondItem="gmI-r3-LfR" secondAttribute="bottom" id="J65-Hd-CSn"/>
-                            <constraint firstItem="gmI-r3-LfR" firstAttribute="top" secondItem="k6J-v1-QnI" secondAttribute="top" id="UWV-Jw-vgS"/>
-                            <constraint firstItem="hSN-A5-RAj" firstAttribute="trailing" secondItem="k6J-v1-QnI" secondAttribute="trailing" id="nus-oV-Mvz"/>
+                            <constraint firstItem="gmI-r3-LfR" firstAttribute="top" secondItem="e9Y-qt-smg" secondAttribute="top" id="UWV-Jw-vgS"/>
+                            <constraint firstItem="hSN-A5-RAj" firstAttribute="trailing" secondItem="e9Y-qt-smg" secondAttribute="trailing" id="nus-oV-Mvz"/>
                             <constraint firstAttribute="bottom" secondItem="hSN-A5-RAj" secondAttribute="bottom" id="yn0-wY-nkL"/>
                         </constraints>
                     </view>
@@ -356,11 +362,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="iKH-dE-faP"/>
+                        <viewLayoutGuide key="safeArea" id="ctn-II-9pg"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="a5R-gQ-prM" firstAttribute="centerY" secondItem="Gsf-to-Tne" secondAttribute="centerY" id="Eu5-qh-1eE"/>
-                            <constraint firstItem="a5R-gQ-prM" firstAttribute="centerX" secondItem="Gsf-to-Tne" secondAttribute="centerX" id="rve-aC-cWm"/>
+                            <constraint firstItem="a5R-gQ-prM" firstAttribute="centerX" secondItem="ctn-II-9pg" secondAttribute="centerX" id="rve-aC-cWm"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -382,12 +388,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="0TI-gN-lo6"/>
+                        <viewLayoutGuide key="safeArea" id="Da6-kU-4ND"/>
                         <color key="backgroundColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="V2n-OJ-GFx" firstAttribute="centerY" secondItem="BAz-ro-MXK" secondAttribute="centerY" id="Wu8-Bs-eXs"/>
-                            <constraint firstItem="V2n-OJ-GFx" firstAttribute="centerX" secondItem="BAz-ro-MXK" secondAttribute="centerX" id="pVW-Gr-gCx"/>
-                            <constraint firstItem="V2n-OJ-GFx" firstAttribute="centerX" secondItem="BAz-ro-MXK" secondAttribute="centerX" id="sK5-Zj-pp6"/>
+                            <constraint firstItem="V2n-OJ-GFx" firstAttribute="centerX" secondItem="Da6-kU-4ND" secondAttribute="centerX" id="pVW-Gr-gCx"/>
+                            <constraint firstItem="V2n-OJ-GFx" firstAttribute="centerX" secondItem="Da6-kU-4ND" secondAttribute="centerX" id="sK5-Zj-pp6"/>
                             <constraint firstItem="V2n-OJ-GFx" firstAttribute="centerY" secondItem="BAz-ro-MXK" secondAttribute="centerY" id="sxC-cj-OE1"/>
                         </constraints>
                     </view>
@@ -442,7 +448,11 @@
         </scene>
     </scenes>
     <resources>
+<<<<<<< HEAD
+        <image name="1" width="1080" height="1396"/>
+=======
         <image name="2" width="1080" height="1440"/>
+>>>>>>> parent of cafad06 (初始化)
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="message.fill" catalog="system" width="128" height="114"/>
