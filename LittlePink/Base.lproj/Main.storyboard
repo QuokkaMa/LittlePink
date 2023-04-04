@@ -113,7 +113,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1V-zG-e71">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="e1V-zG-e71">
                                 <rect key="frame" x="0.0" y="47" width="390" height="797"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t9q-Jj-3xs">
@@ -210,12 +210,18 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="358" height="16"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="填写标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fvo-cp-wXK">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="16"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="16"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                                        <connections>
+                                                                            <action selector="TFDidOnExit:" destination="mls-JQ-4VZ" eventType="editingDidEndOnExit" id="FXa-m6-bS0"/>
+                                                                            <action selector="TFEditBegin:" destination="mls-JQ-4VZ" eventType="editingDidBegin" id="gP2-Vt-bxO"/>
+                                                                            <action selector="TFEditEnd:" destination="mls-JQ-4VZ" eventType="editingDidEnd" id="WsZ-60-jgI"/>
+                                                                            <outlet property="delegate" destination="mls-JQ-4VZ" id="7vw-PV-FHz"/>
+                                                                        </connections>
                                                                     </textField>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbL-TL-5Br">
-                                                                        <rect key="frame" x="342" y="0.0" width="16" height="16"/>
+                                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbL-TL-5Br">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="16"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                         <color key="textColor" systemColor="tertiaryLabelColor"/>
                                                                         <nil key="highlightedColor"/>

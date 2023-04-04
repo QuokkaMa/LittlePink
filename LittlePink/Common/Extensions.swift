@@ -34,6 +34,20 @@ extension UIViewController{
         hud.detailsLabel.text = subTitle
         hud.hide(animated: true,afterDelay: 2)
     }
+    
+    // MARK: - 添加手势 点击空白处 收回键盘
+    func hideKeyboardWhenTappedAround(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        // 不取消 其他触摸点击
+        tap.cancelsTouchesInView  = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    
+    
 }
 
 extension Bundle{

@@ -33,6 +33,30 @@ class NoteEditVC: UIViewController {
         super.viewDidLoad()
         // 开启拖放交互
         photoCollectionview.dragInteractionEnabled = true
+        // 点击空白处 收回键盘
+        hideKeyboardWhenTappedAround()
     }
     
+    
+    @IBAction func TFEditBegin(_ sender: Any) {
+        titleCountLable.isHidden = false
+    }
+    
+    @IBAction func TFEditEnd(_ sender: Any) {
+        titleCountLable.isHidden = true
+    }
+    
+    
+    @IBAction func TFDidOnExit(_ sender: Any) {
+        // 点击键盘 "完成: 收起小键盘 空方法即可
+    }
+}
+
+
+extension NoteEditVC: UITextFieldDelegate{
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        // 点击键盘 "完成: 收起小键盘
+//        textField.resignFirstResponder()
+//        return true
+//    }
 }
