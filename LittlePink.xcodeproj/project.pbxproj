@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F3E626B29BF15F000D9650B /* PhotoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E626A29BF15F000D9650B /* PhotoFooter.swift */; };
+		0F5A57C429DACD65002478C4 /* NoteEdit-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5A57C329DACD65002478C4 /* NoteEdit-CollectionView.swift */; };
 		0F71386F299F9CE80071743F /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F71386E299F9CE80071743F /* PhotoCell.swift */; };
 		0F94B73A296BF6BD00D9ED5D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F94B739296BF6BD00D9ED5D /* HomeVC.swift */; };
 		0F94B73C296C0D6800D9ED5D /* FollowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F94B73B296C0D6800D9ED5D /* FollowVC.swift */; };
@@ -27,17 +28,20 @@
 		0FC3EDBC296C17E900872CCE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDBB296C17E900872CCE /* Constants.swift */; };
 		0FC3EDC0296EAC9400872CCE /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */; };
 		0FC3EDC2296EB4C200872CCE /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */; };
-		73949601B1357041281DB6D2 /* Pods_LittlePink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2940451015136ED2E68F684 /* Pods_LittlePink.framework */; };
+		0FDE03C929D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDE03C829D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift */; };
+		0FE5203D29D590E900DC41E4 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0FE5203C29D58F3500DC41E4 /* testVideo.mp4 */; };
+		0FEF7F8229D6DF5F0057A5E8 /* Pods_LittlePink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2940451015136ED2E68F684 /* Pods_LittlePink.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F3E626A29BF15F000D9650B /* PhotoFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFooter.swift; sourceTree = "<group>"; };
+		0F5A57C329DACD65002478C4 /* NoteEdit-CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEdit-CollectionView.swift"; sourceTree = "<group>"; };
 		0F71386E299F9CE80071743F /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		0F94B739296BF6BD00D9ED5D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0F94B73B296C0D6800D9ED5D /* FollowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowVC.swift; sourceTree = "<group>"; };
 		0F94B73D296C0D7B00D9ED5D /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
 		0F94B73F296C0D8A00D9ED5D /* NearByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByVC.swift; sourceTree = "<group>"; };
-		0FA5AB3029851BD600DFDEB3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0FA5AB3029851BD600DFDEB3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		0FA5AB3329851DF900DFDEB3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0FA5AB34298616EF00DFDEB3 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
 		0FA5AB36298618CC00DFDEB3 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
@@ -54,6 +58,9 @@
 		0FC3EDBB296C17E900872CCE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
+		0FDE03C829D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
+		0FE5203829D5389F00DC41E4 /* LittlePink-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LittlePink-Bridging-Header.h"; sourceTree = "<group>"; };
+		0FE5203C29D58F3500DC41E4 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
 		4F19BE21A1E8B6425567E0D7 /* Pods-LittlePink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.debug.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.debug.xcconfig"; sourceTree = "<group>"; };
 		85B84C20B7BEE1777CE4557C /* Pods-LittlePink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.release.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.release.xcconfig"; sourceTree = "<group>"; };
 		C2940451015136ED2E68F684 /* Pods_LittlePink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittlePink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73949601B1357041281DB6D2 /* Pods_LittlePink.framework in Frameworks */,
+				0FEF7F8229D6DF5F0057A5E8 /* Pods_LittlePink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +81,11 @@
 		0F3E626C29BF211A00D9650B /* NoteEdit */ = {
 			isa = PBXGroup;
 			children = (
-				0FA5AB3B2989114300DFDEB3 /* NoteEditVC.swift */,
 				0F71386E299F9CE80071743F /* PhotoCell.swift */,
 				0F3E626A29BF15F000D9650B /* PhotoFooter.swift */,
+				0FA5AB3B2989114300DFDEB3 /* NoteEditVC.swift */,
+				0FDE03C829D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift */,
+				0F5A57C329DACD65002478C4 /* NoteEdit-CollectionView.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -101,7 +110,6 @@
 		0FAE5C6F2966C8E800E3ED39 = {
 			isa = PBXGroup;
 			children = (
-				0FA5AB3029851BD600DFDEB3 /* README.md */,
 				0FAE5C7A2966C8E800E3ED39 /* LittlePink */,
 				0FAE5C792966C8E800E3ED39 /* Products */,
 				B1370AAC3A60F79BAC0BBF18 /* Pods */,
@@ -122,8 +130,8 @@
 			children = (
 				0FAE5C7B2966C8E800E3ED39 /* AppDelegate.swift */,
 				0FAE5C7D2966C8E800E3ED39 /* SceneDelegate.swift */,
-				0FAE5C812966C8E800E3ED39 /* Main.storyboard */,
 				0FA5AB34298616EF00DFDEB3 /* TabBarC.swift */,
+				0FAE5C812966C8E800E3ED39 /* Main.storyboard */,
 				0FAE5C872966C8E900E3ED39 /* Assets.xcassets */,
 				0FC3EDBE296C197A00872CCE /* Home */,
 				0FC3EDC3296EB4D000872CCE /* Waterfall */,
@@ -132,6 +140,8 @@
 				0FAE5C892966C8E900E3ED39 /* LaunchScreen.storyboard */,
 				0FAE5C8C2966C8E900E3ED39 /* Info.plist */,
 				0FAE5C842966C8E800E3ED39 /* LittlePink.xcdatamodeld */,
+				0FE5203829D5389F00DC41E4 /* LittlePink-Bridging-Header.h */,
+				0FE5203C29D58F3500DC41E4 /* testVideo.mp4 */,
 				0FA5AB3A29869D3400DFDEB3 /* Demo+PH */,
 			);
 			path = LittlePink;
@@ -168,6 +178,7 @@
 		B1370AAC3A60F79BAC0BBF18 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				0FA5AB3029851BD600DFDEB3 /* README.md */,
 				4F19BE21A1E8B6425567E0D7 /* Pods-LittlePink.debug.xcconfig */,
 				85B84C20B7BEE1777CE4557C /* Pods-LittlePink.release.xcconfig */,
 			);
@@ -238,6 +249,7 @@
 				0FAE5C8B2966C8E900E3ED39 /* LaunchScreen.storyboard in Resources */,
 				0FAE5C882966C8E900E3ED39 /* Assets.xcassets in Resources */,
 				0FA5AB3129851BD600DFDEB3 /* README.md in Resources */,
+				0FE5203D29D590E900DC41E4 /* testVideo.mp4 in Resources */,
 				0FAE5C832966C8E800E3ED39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FDE03C929D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift in Sources */,
 				0F94B73A296BF6BD00D9ED5D /* HomeVC.swift in Sources */,
 				0F71386F299F9CE80071743F /* PhotoCell.swift in Sources */,
 				0FA5AB35298616EF00DFDEB3 /* TabBarC.swift in Sources */,
@@ -306,6 +319,7 @@
 				0F94B73E296C0D7B00D9ED5D /* DiscoveryVC.swift in Sources */,
 				0FAE5C862966C8E800E3ED39 /* LittlePink.xcdatamodeld in Sources */,
 				0F94B73C296C0D6800D9ED5D /* FollowVC.swift in Sources */,
+				0F5A57C429DACD65002478C4 /* NoteEdit-CollectionView.swift in Sources */,
 				0FC3EDBC296C17E900872CCE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -439,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -478,6 +492,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "LittlePink/LittlePink-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -512,6 +527,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "LittlePink/LittlePink-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
