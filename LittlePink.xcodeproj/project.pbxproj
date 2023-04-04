@@ -24,7 +24,7 @@
 		0FAE5C862966C8E800E3ED39 /* LittlePink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FAE5C842966C8E800E3ED39 /* LittlePink.xcdatamodeld */; };
 		0FAE5C882966C8E900E3ED39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FAE5C872966C8E900E3ED39 /* Assets.xcassets */; };
 		0FAE5C8B2966C8E900E3ED39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FAE5C892966C8E900E3ED39 /* LaunchScreen.storyboard */; };
-		0FB5A08229DC275000CF8B35 /* NoteEdit-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5A08129DC275000CF8B35 /* NoteEdit-CollectionView.swift */; };
+		0FB5A08229DC275000CF8B35 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5A08129DC275000CF8B35 /* NoteEditVC-CollectionView.swift */; };
 		0FC3EDBC296C17E900872CCE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDBB296C17E900872CCE /* Constants.swift */; };
 		0FC3EDC0296EAC9400872CCE /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */; };
 		0FC3EDC2296EB4C200872CCE /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */; };
@@ -54,7 +54,7 @@
 		0FAE5C872966C8E900E3ED39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FAE5C8A2966C8E900E3ED39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FAE5C8C2966C8E900E3ED39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FB5A08129DC275000CF8B35 /* NoteEdit-CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEdit-CollectionView.swift"; sourceTree = "<group>"; };
+		0FB5A08129DC275000CF8B35 /* NoteEditVC-CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-CollectionView.swift"; sourceTree = "<group>"; };
 		0FC3EDBB296C17E900872CCE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				0F3E626A29BF15F000D9650B /* PhotoFooter.swift */,
 				0FA5AB3B2989114300DFDEB3 /* NoteEditVC.swift */,
 				0FDE03C829D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift */,
-				0FB5A08129DC275000CF8B35 /* NoteEdit-CollectionView.swift */,
+				0FB5A08129DC275000CF8B35 /* NoteEditVC-CollectionView.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 				0F94B73E296C0D7B00D9ED5D /* DiscoveryVC.swift in Sources */,
 				0FAE5C862966C8E800E3ED39 /* LittlePink.xcdatamodeld in Sources */,
 				0F94B73C296C0D6800D9ED5D /* FollowVC.swift in Sources */,
-				0FB5A08229DC275000CF8B35 /* NoteEdit-CollectionView.swift in Sources */,
+				0FB5A08229DC275000CF8B35 /* NoteEditVC-CollectionView.swift in Sources */,
 				0FC3EDBC296C17E900872CCE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

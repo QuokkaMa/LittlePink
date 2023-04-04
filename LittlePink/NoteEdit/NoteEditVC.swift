@@ -16,12 +16,23 @@ class NoteEditVC: UIViewController {
     var videoUrl:URL?
 //    var videoUrl:URL = Bundle.main.url(forResource: "testVideo", withExtension: "mp4")!
     
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    
+    @IBOutlet weak var titleCountLable: UILabel!
+    
+    @IBOutlet weak var textView: UITextView!
+    
     @IBOutlet weak var photoCollectionview: UICollectionView!
+    
     var isVideo: Bool{ videoUrl != nil}
     
     var photoCount: Int{ photos.count }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 开启拖放交互
+        photoCollectionview.dragInteractionEnabled = true
     }
     
 }
