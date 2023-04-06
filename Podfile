@@ -1,3 +1,5 @@
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
 post_install do |installer|
   installer.generated_projects.each do |project|
     project.targets.each do |target|
@@ -7,6 +9,7 @@ post_install do |installer|
     end
   end
 end
+
 
 # Uncomment the next line to define a global platform for your project
 platform :ios, '14.0'
@@ -24,8 +27,9 @@ target 'LittlePink' do
   pod 'MBProgressHUD', '~> 1.2.0'
   # 图片放大
   pod 'SKPhotoBrowser'
-#  pod 'KMPlaceholderTextView', '~> 1.4.0'
+  pod 'KMPlaceholderTextView', '~> 1.4.0'
   
 end
+
 
 
