@@ -259,6 +259,9 @@
                                                                         <color key="value" systemColor="placeholderTextColor"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="mls-JQ-4VZ" id="p2V-16-Bw7"/>
+                                                                </connections>
                                                             </textView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vvK-Zh-eAl">
                                                                 <rect key="frame" x="0.0" y="146" width="358" height="1"/>

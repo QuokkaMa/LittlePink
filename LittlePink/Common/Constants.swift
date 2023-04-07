@@ -39,3 +39,4 @@ let kSpacingBetweenItems: CGFloat = 2
 
 // 笔记
 let KMaxNoteTitleCount = 20
+let kMaxNoteTextCount = 1000

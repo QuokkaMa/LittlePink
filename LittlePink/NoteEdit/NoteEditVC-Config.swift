@@ -32,6 +32,30 @@ extension NoteEditVC{
         textView.typingAttributes = typingAttributes
         // 光标颜色
         textView.tintColorDidChange()
+        // 软键盘上面的view
+        if let textViewIAView = Bundle.main.loadNibNamed("TextViewIAView", owner: nil, options: nil)?.first as? TextViewIAView {
+            textView.inputAccessoryView = textViewIAView
+            textViewIAView.doneBtn.addTarget(self, action: #selector(resignTextView), for: .touchUpInside)
+            textViewIAView.maxTextCountLabel.text = "/\(kMaxNoteTextCount)"
+        }
     }
     
+}
+
+// MARK: - UITextViewDelegate
+extension NoteEditVC: UITextViewDelegate{
+    func textViewDidChange(_ textView: UITextView) {
+        // 如果是高亮文字不展示
+        guard textView.markedTextRange == nil else { return }
+        // 更新文字
+        textViewIAView.currentTextCount = textView.text.count
+    }
+}
+
+
+// MARK: - 监听
+extension NoteEditVC{
+    @objc private func resignTextView(){
+        textView.resignFirstResponder()
+    }
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F3E626B29BF15F000D9650B /* PhotoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E626A29BF15F000D9650B /* PhotoFooter.swift */; };
 		0F6E4EDD29DEBB0700421F33 /* NoteEditVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E4EDC29DEBB0700421F33 /* NoteEditVC-Config.swift */; };
+		0F6E4EDF29DFA63F00421F33 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E4EDE29DFA63F00421F33 /* TextViewIAView.xib */; };
+		0F6E4EE129DFA6B900421F33 /* TextViewIAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E4EE029DFA6B900421F33 /* TextViewIAView.swift */; };
 		0F71386F299F9CE80071743F /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F71386E299F9CE80071743F /* PhotoCell.swift */; };
 		0F94B73A296BF6BD00D9ED5D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F94B739296BF6BD00D9ED5D /* HomeVC.swift */; };
 		0F94B73C296C0D6800D9ED5D /* FollowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F94B73B296C0D6800D9ED5D /* FollowVC.swift */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		0F3E626A29BF15F000D9650B /* PhotoFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFooter.swift; sourceTree = "<group>"; };
 		0F6E4EDC29DEBB0700421F33 /* NoteEditVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Config.swift"; sourceTree = "<group>"; };
+		0F6E4EDE29DFA63F00421F33 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
+		0F6E4EE029DFA6B900421F33 /* TextViewIAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIAView.swift; sourceTree = "<group>"; };
 		0F71386E299F9CE80071743F /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		0F94B739296BF6BD00D9ED5D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0F94B73B296C0D6800D9ED5D /* FollowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowVC.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				0FDE03C829D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift */,
 				0FB5A08129DC275000CF8B35 /* NoteEditVC-CollectionView.swift */,
 				0F6E4EDC29DEBB0700421F33 /* NoteEditVC-Config.swift */,
+				0F6E4EDE29DFA63F00421F33 /* TextViewIAView.xib */,
+				0F6E4EE029DFA6B900421F33 /* TextViewIAView.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 			files = (
 				0FAE5C8B2966C8E900E3ED39 /* LaunchScreen.storyboard in Resources */,
 				0FAE5C882966C8E900E3ED39 /* Assets.xcassets in Resources */,
+				0F6E4EDF29DFA63F00421F33 /* TextViewIAView.xib in Resources */,
 				0FA5AB3129851BD600DFDEB3 /* README.md in Resources */,
 				0FE5203D29D590E900DC41E4 /* testVideo.mp4 in Resources */,
 				0FAE5C832966C8E800E3ED39 /* Main.storyboard in Resources */,
@@ -306,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6E4EE129DFA6B900421F33 /* TextViewIAView.swift in Sources */,
 				0FDE03C929D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift in Sources */,
 				0F94B73A296BF6BD00D9ED5D /* HomeVC.swift in Sources */,
 				0F71386F299F9CE80071743F /* PhotoCell.swift in Sources */,

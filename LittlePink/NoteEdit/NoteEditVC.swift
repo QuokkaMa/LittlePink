@@ -25,9 +25,10 @@ class NoteEditVC: UIViewController {
     
     @IBOutlet weak var photoCollectionview: UICollectionView!
     
-    var isVideo: Bool{ videoUrl != nil}
-    
     var photoCount: Int{ photos.count }
+    var isVideo: Bool{ videoUrl != nil}
+    var textViewIAView: TextViewIAView{ textView.inputAccessoryView as! TextViewIAView }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
