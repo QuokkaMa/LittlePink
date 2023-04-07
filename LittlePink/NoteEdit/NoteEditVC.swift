@@ -45,6 +45,10 @@ class NoteEditVC: UIViewController {
         titleCountLable.isHidden = true
     }
     
+    @IBAction func TFDidOnExit(_ sender: Any) {
+        // 点击键盘 "完成: 收起小键盘 空方法即可
+    }
+    
     @IBAction func TFEditChanged(_ sender: Any) {
         // 输入文字高亮时, 不减最大输入文字数
         guard titleTextField.markedTextRange == nil else {return}
@@ -62,10 +66,8 @@ class NoteEditVC: UIViewController {
         titleCountLable.text = "\(KMaxNoteTitleCount - titleTextField.unwrappedText.count)"
         
     }
-    
-    @IBAction func TFDidOnExit(_ sender: Any) {
-        // 点击键盘 "完成: 收起小键盘 空方法即可
-    }
+
+    //  待做(存草稿和发布笔记之前需要判断当前用户输入的正文文本数量,是否大于最大可输入数量)	
 }
 
 
