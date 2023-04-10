@@ -28,6 +28,9 @@
 		0FAE5C882966C8E900E3ED39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FAE5C872966C8E900E3ED39 /* Assets.xcassets */; };
 		0FAE5C8B2966C8E900E3ED39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FAE5C892966C8E900E3ED39 /* LaunchScreen.storyboard */; };
 		0FB5A08229DC275000CF8B35 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5A08129DC275000CF8B35 /* NoteEditVC-CollectionView.swift */; };
+		0FB89D3329E3AEB8008D50BC /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB89D3229E3AEB8008D50BC /* ChannelVC.swift */; };
+		0FB89D3629E3B5E1008D50BC /* ChannelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */; };
+		0FB89D3829E3F032008D50BC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB89D3729E3F032008D50BC /* Protocols.swift */; };
 		0FC3EDBC296C17E900872CCE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDBB296C17E900872CCE /* Constants.swift */; };
 		0FC3EDC0296EAC9400872CCE /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */; };
 		0FC3EDC2296EB4C200872CCE /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */; };
@@ -61,6 +64,9 @@
 		0FAE5C8A2966C8E900E3ED39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FAE5C8C2966C8E900E3ED39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FB5A08129DC275000CF8B35 /* NoteEditVC-CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-CollectionView.swift"; sourceTree = "<group>"; };
+		0FB89D3229E3AEB8008D50BC /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableVC.swift; sourceTree = "<group>"; };
+		0FB89D3729E3F032008D50BC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		0FC3EDBB296C17E900872CCE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 				0F6E4EDC29DEBB0700421F33 /* NoteEditVC-Config.swift */,
 				0F6E4EDE29DFA63F00421F33 /* TextViewIAView.xib */,
 				0F6E4EE029DFA6B900421F33 /* TextViewIAView.swift */,
+				0FB89D3229E3AEB8008D50BC /* ChannelVC.swift */,
+				0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -104,6 +112,7 @@
 			children = (
 				0FC3EDBB296C17E900872CCE /* Constants.swift */,
 				0FA5AB382986569700DFDEB3 /* Extensions.swift */,
+				0FB89D3729E3F032008D50BC /* Protocols.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -314,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F6E4EE129DFA6B900421F33 /* TextViewIAView.swift in Sources */,
+				0FB89D3829E3F032008D50BC /* Protocols.swift in Sources */,
 				0FDE03C929D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift in Sources */,
 				0F94B73A296BF6BD00D9ED5D /* HomeVC.swift in Sources */,
 				0F71386F299F9CE80071743F /* PhotoCell.swift in Sources */,
@@ -326,11 +336,13 @@
 				0F94B740296C0D8A00D9ED5D /* NearByVC.swift in Sources */,
 				0FA5AB37298618CC00DFDEB3 /* PostVC.swift in Sources */,
 				0FAE5C7E2966C8E800E3ED39 /* SceneDelegate.swift in Sources */,
+				0FB89D3329E3AEB8008D50BC /* ChannelVC.swift in Sources */,
 				0F6E4EDD29DEBB0700421F33 /* NoteEditVC-Config.swift in Sources */,
 				0FA5AB392986569700DFDEB3 /* Extensions.swift in Sources */,
 				0F94B73E296C0D7B00D9ED5D /* DiscoveryVC.swift in Sources */,
 				0FAE5C862966C8E800E3ED39 /* LittlePink.xcdatamodeld in Sources */,
 				0F94B73C296C0D6800D9ED5D /* FollowVC.swift in Sources */,
+				0FB89D3629E3B5E1008D50BC /* ChannelTableVC.swift in Sources */,
 				0FB5A08229DC275000CF8B35 /* NoteEditVC-CollectionView.swift in Sources */,
 				0FC3EDBC296C17E900872CCE /* Constants.swift in Sources */,
 			);

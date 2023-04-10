@@ -16,14 +16,18 @@ class NoteEditVC: UIViewController {
     var videoUrl:URL?
 //    var videoUrl:URL = Bundle.main.url(forResource: "testVideo", withExtension: "mp4")!
     
-    
-    @IBOutlet weak var titleTextField: UITextField!
-    
-    @IBOutlet weak var titleCountLable: UILabel!
-    
-    @IBOutlet weak var textView: UITextView!
+    var channel = ""
+    var subChannel = ""
+    var poiName = ""
     
     @IBOutlet weak var photoCollectionview: UICollectionView!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var titleCountLable: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet weak var channelIcon: UIImageView!
+    @IBOutlet weak var channelLabel: UILabel!
+    @IBOutlet weak var channelPlaceholderLabel: UILabel!
     
     var photoCount: Int{ photos.count }
     var isVideo: Bool{ videoUrl != nil}
@@ -67,29 +71,48 @@ class NoteEditVC: UIViewController {
         
     }
 
-    //  待做(存草稿和发布笔记之前需要判断当前用户输入的正文文本数量,是否大于最大可输入数量)	
+    //  存草稿和发布笔记之前需要判断当前用户输入的正文文本数量,是否大于最大可输入数量
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let channelVC = segue.destination as? ChannelVC{
+            view.endEditing(true)
+            channelVC.PVDelegate = self
+        }
+    }
 }
 
 
-//extension NoteEditVC: UITextFieldDelegate{
-//    // 点击键盘 "完成: 收起小键盘
-//    //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//    //
-//    //        textField.resignFirstResponder()
-//    //        return true
-//    //    }
-//
-//    // 标题超过 20 戈文字进行拦截
+extension NoteEditVC: UITextFieldDelegate{
+    // 点击键盘 "完成: 收起小键盘
+    //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    //        textField.resignFirstResponder()
+    //        return true
+    //    }
+
+    // 标题超过 20 戈文字进行拦截
 //    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//
 //        guard titleTextField.markedTextRange == nil else {return false}
-//
 //        let isExceed = range.location >= KMaxNoteTitleCount || (textField.unwrappedText.count + string.count ) > KMaxNoteTitleCount
-//
-//        if isExceed {
-//            showTextHUD("标题最多输入\(KMaxNoteTitleCount)")
-//        }
-//
+//        if isExceed {showTextHUD("标题最多输入\(KMaxNoteTitleCount)")}
 //        return !isExceed
 //    }
-//}
+    
+//    func textViewDidChange(_ textView: UITextView){
+//        guard textView.markedTextRange == nil else {return}
+//        textViewIAView.currentTextCount = textView.text.count
+//    }
+}
+
+
+// MARK: - ChannelVCDelegate
+extension NoteEditVC: ChannelVCDelegate{
+    func updateChannel(channel: String, subChannel: String) {
+        //数据
+        self.channel = channel
+        self.subChannel = subChannel
+        //UI
+        channelIcon.tintColor = blueColor
+        channelLabel.text = subChannel
+        channelLabel.textColor = blueColor
+        channelPlaceholderLabel.isHidden = true
+    }
+}
