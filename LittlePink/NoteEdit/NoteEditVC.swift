@@ -33,6 +33,7 @@ class NoteEditVC: UIViewController {
     var isVideo: Bool{ videoUrl != nil}
     var textViewIAView: TextViewIAView{ textView.inputAccessoryView as! TextViewIAView }
    
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()

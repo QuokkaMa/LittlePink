@@ -37,6 +37,15 @@ extension NoteEditVC{
         textViewIAView.doneBtn.addTarget(self, action: #selector(resignTextView), for: .touchUpInside)
         textViewIAView.maxTextCountLabel.text = "/\(kMaxNoteTextCount)"
 
+        //请求定位权限
+        locationManager.requestWhenInUseAuthorization()
+        
+        AMapLocationManager.updatePrivacyShow(.didShow, privacyInfo: .didContain)
+        AMapLocationManager.updatePrivacyAgree(.didAgree)
+        
+        AMapSearchAPI.updatePrivacyShow(.didShow, privacyInfo: .didContain)
+        AMapSearchAPI.updatePrivacyAgree(.didAgree)
+        
     }
     
 }

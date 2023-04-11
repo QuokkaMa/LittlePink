@@ -29,6 +29,8 @@ target 'LittlePink' do
   pod 'SKPhotoBrowser'
   pod 'KMPlaceholderTextView', '~> 1.4.0'
   pod 'AMapLocation'
+  pod 'AMapSearch'
+  pod 'MJRefresh'
   
 end
 

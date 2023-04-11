@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F05A3D029E54D7D002497A5 /* POIVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A3CF29E54D7C002497A5 /* POIVC-Config.swift */; };
 		0F3E626B29BF15F000D9650B /* PhotoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E626A29BF15F000D9650B /* PhotoFooter.swift */; };
 		0F6E4EDD29DEBB0700421F33 /* NoteEditVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E4EDC29DEBB0700421F33 /* NoteEditVC-Config.swift */; };
 		0F6E4EDF29DFA63F00421F33 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E4EDE29DFA63F00421F33 /* TextViewIAView.xib */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F05A3CF29E54D7C002497A5 /* POIVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-Config.swift"; sourceTree = "<group>"; };
 		0F3E626A29BF15F000D9650B /* PhotoFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFooter.swift; sourceTree = "<group>"; };
 		0F6E4EDC29DEBB0700421F33 /* NoteEditVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Config.swift"; sourceTree = "<group>"; };
 		0F6E4EDE29DFA63F00421F33 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				0FB89D3229E3AEB8008D50BC /* ChannelVC.swift */,
 				0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */,
 				0FB89D3929E40DA2008D50BC /* POIVC.swift */,
+				0F05A3CF29E54D7C002497A5 /* POIVC-Config.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				0FAE5C7E2966C8E800E3ED39 /* SceneDelegate.swift in Sources */,
 				0FB89D3329E3AEB8008D50BC /* ChannelVC.swift in Sources */,
 				0F6E4EDD29DEBB0700421F33 /* NoteEditVC-Config.swift in Sources */,
+				0F05A3D029E54D7D002497A5 /* POIVC-Config.swift in Sources */,
 				0FA5AB392986569700DFDEB3 /* Extensions.swift in Sources */,
 				0F94B73E296C0D7B00D9ED5D /* DiscoveryVC.swift in Sources */,
 				0FAE5C862966C8E800E3ED39 /* LittlePink.xcdatamodeld in Sources */,
@@ -412,6 +416,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -473,6 +478,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

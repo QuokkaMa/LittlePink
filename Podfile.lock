@@ -2,9 +2,12 @@ PODS:
   - AMapFoundation (1.8.2)
   - AMapLocation (2.10.0):
     - AMapFoundation (>= 1.8.0)
+  - AMapSearch (9.5.0):
+    - AMapFoundation (>= 1.8.0)
   - CHTCollectionViewWaterfallLayout/Swift (0.9.10)
   - KMPlaceholderTextView (1.4.0)
   - MBProgressHUD (1.2.0)
+  - MJRefresh (3.7.5)
   - PryntTrimmerView (4.0.2)
   - SKPhotoBrowser (7.1.0)
   - SteviaLayout (4.7.3)
@@ -15,9 +18,11 @@ PODS:
 
 DEPENDENCIES:
   - AMapLocation
+  - AMapSearch
   - CHTCollectionViewWaterfallLayout/Swift
   - KMPlaceholderTextView (~> 1.4.0)
   - MBProgressHUD (~> 1.2.0)
+  - MJRefresh
   - SKPhotoBrowser
   - XLPagerTabStrip (~> 9.0)
   - YPImagePicker
@@ -34,20 +39,24 @@ SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - AMapFoundation
     - AMapLocation
+    - AMapSearch
     - KMPlaceholderTextView
+    - MJRefresh
 
 SPEC CHECKSUMS:
   AMapFoundation: 9885c48fc3a78fdfb84a0299a2293e56ea3c9fec
   AMapLocation: 5248aec2455ebb5d104b367813c946430a2ee033
+  AMapSearch: e0c81206b8ac1d27ef349095a96ea6398e3a0da3
   CHTCollectionViewWaterfallLayout: b989a459788d7657ac010e03bc0f7eedca95a420
   KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   SKPhotoBrowser: cd95b95a6f352fc2a50992721299f75ead77f9ab
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: c11eda310b2996f6b6ef299dced544c97b94236e
+PODFILE CHECKSUM: 356566191eded4b2a0be24cb521fa7c9ffde15c5
 
 COCOAPODS: 1.12.0
