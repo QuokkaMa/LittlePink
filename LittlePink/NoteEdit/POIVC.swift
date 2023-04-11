@@ -31,27 +31,28 @@ class POIVC: UIViewController {
 
 // MARK: - UITableViewDataSource
 extension POIVC: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { pois.count }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { 0 }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: kPOICellID, for: indexPath) as! POICell
-        
-        let poi = pois[indexPath.row]
-        cell.poi = poi
-        
-        if poi[0] == poiName{ cell.accessoryType = .checkmark }
-        
-        return cell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: kPOICellID, for: indexPath) as! POICell
+//
+//        let poi = pois[indexPath.row]
+//        cell.poi = poi
+//
+//        if poi[0] == poiName{ cell.accessoryType = .checkmark }
+//
+//        return cell
+        return UITableViewCell()
     }
 }
 // MARK: - UITableViewDelegate
 extension POIVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)!
-        cell.accessoryType = .checkmark
-        
-        delegate?.updatePOIName(pois[indexPath.row][0])
-        
-        dismiss(animated: true)
+//        let cell = tableView.cellForRow(at: indexPath)!
+//        cell.accessoryType = .checkmark
+//
+//        delegate?.updatePOIName(pois[indexPath.row][0])
+//
+//        dismiss(animated: true)
     }
 }
