@@ -31,6 +31,7 @@
 		0FB89D3329E3AEB8008D50BC /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB89D3229E3AEB8008D50BC /* ChannelVC.swift */; };
 		0FB89D3629E3B5E1008D50BC /* ChannelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */; };
 		0FB89D3829E3F032008D50BC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB89D3729E3F032008D50BC /* Protocols.swift */; };
+		0FB89D3A29E40DA2008D50BC /* POIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB89D3929E40DA2008D50BC /* POIVC.swift */; };
 		0FC3EDBC296C17E900872CCE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDBB296C17E900872CCE /* Constants.swift */; };
 		0FC3EDC0296EAC9400872CCE /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */; };
 		0FC3EDC2296EB4C200872CCE /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */; };
@@ -49,7 +50,7 @@
 		0F94B73B296C0D6800D9ED5D /* FollowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowVC.swift; sourceTree = "<group>"; };
 		0F94B73D296C0D7B00D9ED5D /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
 		0F94B73F296C0D8A00D9ED5D /* NearByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByVC.swift; sourceTree = "<group>"; };
-		0FA5AB3029851BD600DFDEB3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0FA5AB3029851BD600DFDEB3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0FA5AB3329851DF900DFDEB3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0FA5AB34298616EF00DFDEB3 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
 		0FA5AB36298618CC00DFDEB3 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		0FB89D3229E3AEB8008D50BC /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableVC.swift; sourceTree = "<group>"; };
 		0FB89D3729E3F032008D50BC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		0FB89D3929E40DA2008D50BC /* POIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIVC.swift; sourceTree = "<group>"; };
 		0FC3EDBB296C17E900872CCE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				0F6E4EE029DFA6B900421F33 /* TextViewIAView.swift */,
 				0FB89D3229E3AEB8008D50BC /* ChannelVC.swift */,
 				0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */,
+				0FB89D3929E40DA2008D50BC /* POIVC.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 		0FAE5C7A2966C8E800E3ED39 /* LittlePink */ = {
 			isa = PBXGroup;
 			children = (
+				0FA5AB3029851BD600DFDEB3 /* README.md */,
 				0FAE5C7B2966C8E800E3ED39 /* AppDelegate.swift */,
 				0FAE5C7D2966C8E800E3ED39 /* SceneDelegate.swift */,
 				0FA5AB34298616EF00DFDEB3 /* TabBarC.swift */,
@@ -196,7 +200,6 @@
 		B1370AAC3A60F79BAC0BBF18 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0FA5AB3029851BD600DFDEB3 /* README.md */,
 				4F19BE21A1E8B6425567E0D7 /* Pods-LittlePink.debug.xcconfig */,
 				85B84C20B7BEE1777CE4557C /* Pods-LittlePink.release.xcconfig */,
 			);
@@ -345,6 +348,7 @@
 				0FB89D3629E3B5E1008D50BC /* ChannelTableVC.swift in Sources */,
 				0FB5A08229DC275000CF8B35 /* NoteEditVC-CollectionView.swift in Sources */,
 				0FC3EDBC296C17E900872CCE /* Constants.swift in Sources */,
+				0FB89D3A29E40DA2008D50BC /* POIVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,6 +28,7 @@ target 'LittlePink' do
   # 图片放大
   pod 'SKPhotoBrowser'
   pod 'KMPlaceholderTextView', '~> 1.4.0'
+  pod 'AMapLocation'
   
 end
 
