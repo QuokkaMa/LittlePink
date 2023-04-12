@@ -7,6 +7,45 @@
 
 import UIKit
 
+
+//extension String{
+//    var isBlank: Bool{ self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+//    
+//    var isPhoneNum: Bool{ Int(self) != nil && NSRegularExpression(kPhoneRegEx).matches(self) }
+//    
+//    var isAuthCode: Bool{ Int(self) != nil && NSRegularExpression(kAuthCodeRegEx).matches(self) }
+//    
+//    var isPassword: Bool{ NSRegularExpression(kPasswordRegEx).matches(self) }
+//    
+//    static func randomString(_ length: Int) -> String{
+//        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+//        return String((0..<length).map{ _ in letters.randomElement()! })
+//    }
+//    
+//    //拼接富文本
+//    func spliceAttrStr(_ dateStr: String) -> NSMutableAttributedString{
+//        let attrText = toAttrStr()
+//        let attrDate = " \(dateStr)".toAttrStr(12, .secondaryLabel)
+//        
+//        attrText.append(attrDate)
+//        
+//        return attrText
+//    }
+//    //普通字符串转化为富文本
+//    func toAttrStr(_ fontSize: CGFloat = 14, _ color: UIColor = .label) -> NSMutableAttributedString{
+//        let attr: [NSAttributedString.Key: Any] = [
+//            .font: UIFont.systemFont(ofSize: fontSize),
+//            .foregroundColor: color
+//        ]
+//        return NSMutableAttributedString(string: self, attributes: attr)
+//    }
+//    
+//}
+
+extension Optional where Wrapped == String{
+    var unwrappedText: String { self ?? "" }
+}
+
 extension UITextField{
     var unwrappedText: String { text ?? "" }
 }
@@ -29,6 +68,25 @@ extension UIViewController{
     // MARK: - 展示加载框和提示框
     
     // MARK: 加载框 -- 手动隐藏
+    func showLoadHUD(_ title: String? = nil){
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.label.text = title
+    }
+    func hideLoadHUD(){
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }
+    }
+    
+    static func showGlobalLoadHUD(_ title: String? = nil){
+        let hud = MBProgressHUD.showAdded(to: UIApplication.shared.windows.last!, animated: true)
+        hud.label.text = title
+    }
+    static func hideGlobalHUD(){
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: UIApplication.shared.windows.last!, animated: true)
+        }
+    }
     
     // MARK: 提示框 -- 自动隐藏
     func showTextHUD(_ title: String, _ subTitle: String? = nil){

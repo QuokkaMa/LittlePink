@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0F05A3D029E54D7D002497A5 /* POIVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A3CF29E54D7C002497A5 /* POIVC-Config.swift */; };
+		0F05A3D229E55D4F002497A5 /* POICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A3D129E55D4F002497A5 /* POICell.swift */; };
+		0F0A8BFD29E68754007911BE /* POIVC-Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A8BFC29E68754007911BE /* POIVC-Location.swift */; };
 		0F3E626B29BF15F000D9650B /* PhotoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E626A29BF15F000D9650B /* PhotoFooter.swift */; };
 		0F6E4EDD29DEBB0700421F33 /* NoteEditVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E4EDC29DEBB0700421F33 /* NoteEditVC-Config.swift */; };
 		0F6E4EDF29DFA63F00421F33 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E4EDE29DFA63F00421F33 /* TextViewIAView.xib */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		0F05A3CF29E54D7C002497A5 /* POIVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-Config.swift"; sourceTree = "<group>"; };
+		0F05A3D129E55D4F002497A5 /* POICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POICell.swift; sourceTree = "<group>"; };
+		0F0A8BFC29E68754007911BE /* POIVC-Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-Location.swift"; sourceTree = "<group>"; };
 		0F3E626A29BF15F000D9650B /* PhotoFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFooter.swift; sourceTree = "<group>"; };
 		0F6E4EDC29DEBB0700421F33 /* NoteEditVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Config.swift"; sourceTree = "<group>"; };
 		0F6E4EDE29DFA63F00421F33 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */,
 				0FB89D3929E40DA2008D50BC /* POIVC.swift */,
 				0F05A3CF29E54D7C002497A5 /* POIVC-Config.swift */,
+				0F05A3D129E55D4F002497A5 /* POICell.swift */,
+				0F0A8BFC29E68754007911BE /* POIVC-Location.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				0F6E4EE129DFA6B900421F33 /* TextViewIAView.swift in Sources */,
 				0FB89D3829E3F032008D50BC /* Protocols.swift in Sources */,
 				0FDE03C929D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift in Sources */,
+				0F0A8BFD29E68754007911BE /* POIVC-Location.swift in Sources */,
 				0F94B73A296BF6BD00D9ED5D /* HomeVC.swift in Sources */,
 				0F71386F299F9CE80071743F /* PhotoCell.swift in Sources */,
 				0FA5AB35298616EF00DFDEB3 /* TabBarC.swift in Sources */,
@@ -340,6 +347,7 @@
 				0FA5AB3C2989114300DFDEB3 /* NoteEditVC.swift in Sources */,
 				0FAE5C7C2966C8E800E3ED39 /* AppDelegate.swift in Sources */,
 				0F94B740296C0D8A00D9ED5D /* NearByVC.swift in Sources */,
+				0F05A3D229E55D4F002497A5 /* POICell.swift in Sources */,
 				0FA5AB37298618CC00DFDEB3 /* PostVC.swift in Sources */,
 				0FAE5C7E2966C8E800E3ED39 /* SceneDelegate.swift in Sources */,
 				0FB89D3329E3AEB8008D50BC /* ChannelVC.swift in Sources */,

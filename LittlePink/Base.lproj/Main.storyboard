@@ -515,17 +515,45 @@
                                     <constraint firstAttribute="height" constant="1" id="8cI-ns-9Bl"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PlD-4t-VrW">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PlD-4t-VrW">
+                                <rect key="frame" x="0.0" y="68" width="390" height="766"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CqB-G7-C4w">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICellID" id="CqB-G7-C4w" customClass="POICell" customModule="LittlePink" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CqB-G7-C4w" id="B2K-jH-kOe">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="rNL-MY-GBF">
+                                                    <rect key="frame" x="20.000000000000007" y="11.666666666666668" width="124.66666666666669" height="36.666666666666657"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="淮海工学院" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIP-Hn-C3d">
+                                                            <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="江苏省xx市xx县1-1号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsM-Ho-xDV">
+                                                            <rect key="frame" x="0.0" y="21" width="124.66666666666667" height="15.666666666666664"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" systemColor="quaternaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rNL-MY-GBF" firstAttribute="centerY" secondItem="B2K-jH-kOe" secondAttribute="centerY" id="cux-TB-jee"/>
+                                                <constraint firstItem="rNL-MY-GBF" firstAttribute="leading" secondItem="B2K-jH-kOe" secondAttribute="leadingMargin" id="sVj-RM-iRE"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" name="mainColor"/>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="zsM-Ho-xDV" id="mZW-sF-e8r"/>
+                                            <outlet property="nameLabel" destination="ZIP-Hn-C3d" id="LPs-8u-PXb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -540,7 +568,7 @@
                             <constraint firstAttribute="bottom" secondItem="PlD-4t-VrW" secondAttribute="bottom" id="MHE-SE-WIB"/>
                             <constraint firstItem="PlD-4t-VrW" firstAttribute="leading" secondItem="LrY-T6-pPH" secondAttribute="leading" id="QoA-hi-hrp"/>
                             <constraint firstItem="pmt-W3-kbm" firstAttribute="trailing" secondItem="LrY-T6-pPH" secondAttribute="trailing" constant="-16" id="ZmM-mv-VkU"/>
-                            <constraint firstItem="PlD-4t-VrW" firstAttribute="top" secondItem="bm2-53-UyZ" secondAttribute="top" constant="-68" id="bES-bR-xZj"/>
+                            <constraint firstItem="PlD-4t-VrW" firstAttribute="top" secondItem="bm2-53-UyZ" secondAttribute="top" id="bES-bR-xZj"/>
                             <constraint firstItem="pmt-W3-kbm" firstAttribute="top" secondItem="LrY-T6-pPH" secondAttribute="top" constant="8" id="hVq-qU-f1V"/>
                             <constraint firstItem="bm2-53-UyZ" firstAttribute="trailing" secondItem="JTk-zM-oeW" secondAttribute="trailingMargin" id="i6G-uu-ybq"/>
                             <constraint firstItem="LrY-T6-pPH" firstAttribute="trailing" secondItem="PlD-4t-VrW" secondAttribute="trailing" id="pwA-c4-hPo"/>
@@ -549,6 +577,9 @@
                             <constraint firstItem="bm2-53-UyZ" firstAttribute="top" secondItem="pmt-W3-kbm" secondAttribute="bottom" constant="16" id="xrL-rv-KSZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="PlD-4t-VrW" id="q0b-wF-iXf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caa-sI-qGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
