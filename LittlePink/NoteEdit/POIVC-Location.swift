@@ -67,6 +67,7 @@ extension POIVC{
                     "\(province.unwrappedText)\(reGeocode.city.unwrappedText)\(reGeocode.district.unwrappedText)\(reGeocode.street.unwrappedText)\(reGeocode.number.unwrappedText)"
                 ]
                 POIVC.pois.append(currentPOI)
+                POIVC.aroundSearchedPOIs.append(currentPOI)
                 POIVC.tableView.reloadData()
                 
             }

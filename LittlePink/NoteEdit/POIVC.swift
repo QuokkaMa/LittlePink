@@ -25,17 +25,18 @@ class POIVC: UIViewController {
         return request
     }()
     
-    var pois = [["不显示位置", ""]]
+    //因页面一开始在cell中有数组取值处理，必须规定内嵌的数组有两个元素，若元素数量动态的话可用下面repeating方法
+    var pois = kPOIsInitArr
+    var aroundSearchedPOIs = kPOIsInitArr //完全同步copy周边的pois数组，用于简化逻辑
     
-    @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    // 金纬度
+    // 经纬度
     var latitude = 0.0
     var longitude = 0.0
     // 搜索关键字内容
     var keywords = ""
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,6 @@ class POIVC: UIViewController {
         requestLocation()
         
         mapSearch?.delegate = self
-
     }
 
 }
@@ -54,19 +54,26 @@ extension POIVC: UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty{
-            keywords = searchText
-            pois.removeAll()
-            showLoadHUD()
-            mapSearch?.aMapPOIKeywordsSearch(keywordsSearchRequest)
-           
+            //重置(reset)
+            pois = aroundSearchedPOIs //恢复为之前周边搜索的数据
+            tableView.reloadData()
         }
     }
     
+    // MARK: 关键字搜索POI
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        guard let searchText = searchBar.text, !searchText.isBlank else { return }
+        
+        keywords = searchText
+        pois.removeAll()
+        showLoadHUD()
+        keywordsSearchRequest.keywords = keywords
+        mapSearch?.aMapPOIKeywordsSearch(keywordsSearchRequest)
+        
+    }
+    
 }
-
-
-
-
 
 
 extension POIVC: AMapSearchDelegate{
@@ -85,9 +92,9 @@ extension POIVC: AMapSearchDelegate{
                 "\(province.unwrappedText)\(poi.city.unwrappedText)\(poi.district.unwrappedText)\(address.unwrappedText)"
             ]
             pois.append(poi)
-//            if request is AMapPOIAroundSearchRequest{
-//                aroundSearchedPOIs.append(poi)
-//            }
+            if request is AMapPOIAroundSearchRequest{
+                aroundSearchedPOIs.append(poi)
+            }
         }
         
         tableView.reloadData()

@@ -7,28 +7,28 @@
 
 import UIKit
 
-
-//extension String{
-//    var isBlank: Bool{ self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
-//    
+ 
+extension String{
+    var isBlank: Bool{ self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+    
 //    var isPhoneNum: Bool{ Int(self) != nil && NSRegularExpression(kPhoneRegEx).matches(self) }
-//    
+//
 //    var isAuthCode: Bool{ Int(self) != nil && NSRegularExpression(kAuthCodeRegEx).matches(self) }
-//    
+//
 //    var isPassword: Bool{ NSRegularExpression(kPasswordRegEx).matches(self) }
-//    
+//
 //    static func randomString(_ length: Int) -> String{
 //        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 //        return String((0..<length).map{ _ in letters.randomElement()! })
 //    }
-//    
+//
 //    //拼接富文本
 //    func spliceAttrStr(_ dateStr: String) -> NSMutableAttributedString{
 //        let attrText = toAttrStr()
 //        let attrDate = " \(dateStr)".toAttrStr(12, .secondaryLabel)
-//        
+//
 //        attrText.append(attrDate)
-//        
+//
 //        return attrText
 //    }
 //    //普通字符串转化为富文本
@@ -39,8 +39,8 @@ import UIKit
 //        ]
 //        return NSMutableAttributedString(string: self, attributes: attr)
 //    }
-//    
-//}
+    
+}
 
 extension Optional where Wrapped == String{
     var unwrappedText: String { self ?? "" }
