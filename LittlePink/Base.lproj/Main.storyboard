@@ -578,6 +578,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="pmt-W3-kbm" id="d0G-hA-7b9"/>
                         <outlet property="tableView" destination="PlD-4t-VrW" id="q0b-wF-iXf"/>
                     </connections>
                 </viewController>

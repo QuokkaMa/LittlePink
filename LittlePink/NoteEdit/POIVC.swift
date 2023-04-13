@@ -11,9 +11,17 @@ class POIVC: UIViewController {
 
     lazy var locationManager = AMapLocationManager() //定位用
     lazy var mapSearch = AMapSearchAPI() //搜索POI用
+    //搜索周边POI请求
     lazy var aroundSearchRequest :AMapPOIAroundSearchRequest = {
        let request = AMapPOIAroundSearchRequest()
         request.location =  AMapGeoPoint.location(withLatitude: CGFloat(latitude), longitude: CGFloat(longitude))
+        request.types = kPOITypes
+        return request
+    }()
+    //关键字搜索POI请求
+    lazy var keywordsSearchRequest: AMapPOIKeywordsSearchRequest = {
+        let request = AMapPOIKeywordsSearchRequest()
+        request.offset = kPOIsOffset
         return request
     }()
     
@@ -21,10 +29,13 @@ class POIVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
+    // 金纬度
     var latitude = 0.0
     var longitude = 0.0
-    
+    // 搜索关键字内容
+    var keywords = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +48,26 @@ class POIVC: UIViewController {
     }
 
 }
+
+extension POIVC: UISearchBarDelegate{
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {dismiss(animated: true)}
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty{
+            keywords = searchText
+            pois.removeAll()
+            showLoadHUD()
+            mapSearch?.aMapPOIKeywordsSearch(keywordsSearchRequest)
+           
+        }
+    }
+    
+}
+
+
+
+
+
 
 extension POIVC: AMapSearchDelegate{
     func onPOISearchDone(_ request: AMapPOISearchBaseRequest!, response: AMapPOISearchResponse!) {
