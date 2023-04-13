@@ -48,72 +48,11 @@ class POIVC: UIViewController {
         
         config()
         requestLocation()
-        
-        mapSearch?.delegate = self
     }
 
 }
 
-extension POIVC: UISearchBarDelegate{
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {dismiss(animated: true)}
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty{
-            //重置(reset)
-            pois = aroundSearchedPOIs //恢复为之前周边搜索的数据
-            tableView.reloadData()
-        }
-    }
-    
-    // MARK: 关键字搜索POI
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        guard let searchText = searchBar.text, !searchText.isBlank else { return }
-        
-        keywords = searchText
-        pois.removeAll()
-        showLoadHUD()
-        keywordsSearchRequest.keywords = keywords
-        mapSearch?.aMapPOIKeywordsSearch(keywordsSearchRequest)
-        
-    }
-    
-}
 
-
-extension POIVC: AMapSearchDelegate{
-    func onPOISearchDone(_ request: AMapPOISearchBaseRequest!, response: AMapPOISearchResponse!) {
-
-        hideLoadHUD()
-        
-        
-        let poiCount = response.count
-        
-        if poiCount > kPOIsOffset{
-            pageCount = poiCount / kPOIsOffset + 1
-        }else{
-            footer.endRefreshingWithNoMoreData()
-        }
-        
-        if response.count == 0 {return}
-        
-        for poi in response.pois{
-            let province = poi.province == poi.city ? "" : poi.province
-            let address = poi.district == poi.address ? "" : poi.address
-            
-            let poi = [
-                poi.name ?? kNoPOIPH,
-                "\(province.unwrappedText)\(poi.city.unwrappedText)\(poi.district.unwrappedText)\(address.unwrappedText)"
-            ]
-            pois.append(poi)
-            if request is AMapPOIAroundSearchRequest{
-                aroundSearchedPOIs.append(poi)
-            }
-        }
-        
-        tableView.reloadData()
-    }
-}
     
     
 // MARK: - UITableViewDataSource

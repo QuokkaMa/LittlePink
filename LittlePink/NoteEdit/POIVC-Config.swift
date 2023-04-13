@@ -13,6 +13,9 @@ extension POIVC{
         locationManager.locationTimeout = 5
         locationManager.reGeocodeTimeout = 5
 
+        //搜索POI
+        mapSearch?.delegate = self
+        
         //配置refresh控件的三种方法,此处用第三种
         //1.闭包
         //tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: {})
