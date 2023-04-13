@@ -9,6 +9,10 @@ import UIKit
 
 class POIVC: UIViewController {
 
+    
+    var delegate: POIVCDelegate?
+    var poiName = ""
+    
     lazy var locationManager = AMapLocationManager() //定位用
     lazy var mapSearch = AMapSearchAPI() //搜索POI用
     //搜索周边POI请求
@@ -72,12 +76,12 @@ extension POIVC: UITableViewDataSource{
 // MARK: - UITableViewDelegate
 extension POIVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.cellForRow(at: indexPath)!
-//        cell.accessoryType = .checkmark
-//
-//        delegate?.updatePOIName(pois[indexPath.row][0])
-//
-//        dismiss(animated: true)
+        let cell = tableView.cellForRow(at: indexPath)!
+        cell.accessoryType = .checkmark
+
+        delegate?.updatePOIName(pois[indexPath.row][0])
+
+        dismiss(animated: true)
     }
 }
 

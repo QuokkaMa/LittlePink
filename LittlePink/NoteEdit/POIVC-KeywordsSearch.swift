@@ -15,6 +15,7 @@ extension POIVC: UISearchBarDelegate{
         if searchText.isEmpty{
             //重置(reset)
             pois = aroundSearchedPOIs //恢复为之前周边搜索的数据
+            setAroundSearchFooter() //恢复为周边搜索的上拉加载功能(防止之前是从关键字搜索过来的)
             tableView.reloadData()
         }
     }

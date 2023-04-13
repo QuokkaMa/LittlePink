@@ -28,6 +28,8 @@ class NoteEditVC: UIViewController {
     @IBOutlet weak var channelIcon: UIImageView!
     @IBOutlet weak var channelLabel: UILabel!
     @IBOutlet weak var channelPlaceholderLabel: UILabel!
+    @IBOutlet weak var poiNameIcon: UIImageView!
+    @IBOutlet weak var poiNameLabel: UILabel!
     
     var photoCount: Int{ photos.count }
     var isVideo: Bool{ videoUrl != nil}
@@ -77,6 +79,9 @@ class NoteEditVC: UIViewController {
         if let channelVC = segue.destination as? ChannelVC{
             view.endEditing(true)
             channelVC.PVDelegate = self
+        }else if let poiVC = segue.destination as? POIVC{
+            poiVC.delegate = self
+            poiVC.poiName = poiName
         }
     }
 }
@@ -115,5 +120,19 @@ extension NoteEditVC: ChannelVCDelegate{
         channelLabel.text = subChannel
         channelLabel.textColor = blueColor
         channelPlaceholderLabel.isHidden = true
+    }
+}
+
+// MARK: - POIVCDelegate
+extension NoteEditVC: POIVCDelegate{
+    func updatePOIName(_ poiName: String) {
+        //数据
+        if poiName == kPOIsInitArr[0][0]{
+            self.poiName = ""
+        }else{
+            self.poiName = poiName
+        }
+        //UI
+        updatePOINameUI()
     }
 }

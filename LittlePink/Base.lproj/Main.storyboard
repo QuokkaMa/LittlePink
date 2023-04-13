@@ -422,6 +422,8 @@
                         <outlet property="channelLabel" destination="JXQ-w3-oiQ" id="Tok-dX-Mng"/>
                         <outlet property="channelPlaceholderLabel" destination="4Vi-5o-2Ph" id="CLr-G8-sAQ"/>
                         <outlet property="photoCollectionview" destination="9HE-tB-5lQ" id="z6b-U0-9Ze"/>
+                        <outlet property="poiNameIcon" destination="j83-9S-YpE" id="kv5-pW-AG2"/>
+                        <outlet property="poiNameLabel" destination="FPt-Cq-hHY" id="nyx-5j-x6w"/>
                         <outlet property="textView" destination="eiv-z0-21r" id="qZA-eZ-4e1"/>
                         <outlet property="titleCountLable" destination="LbL-TL-5Br" id="9wW-2h-bZx"/>
                         <outlet property="titleTextField" destination="Fvo-cp-wXK" id="gcc-rs-pNQ"/>
