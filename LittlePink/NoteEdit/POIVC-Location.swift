@@ -44,7 +44,8 @@ extension POIVC{
                 POIVC.latitude = location.coordinate.latitude
                 POIVC.longitude = location.coordinate.longitude
                 
-                
+                // 搜索周边POI
+                POIVC.footer.setRefreshingTarget(self, refreshingAction: #selector(POIVC.aroundSearchPullToRefresh))
                 POIVC.mapSearch?.aMapPOIAroundSearch(POIVC.aroundSearchRequest)
                 
             }
@@ -72,5 +73,31 @@ extension POIVC{
                 
             }
         })
+    }
+}
+
+// MARK: - 一般函数
+extension POIVC{
+    private func makeKeywordsSearch(_ keywords: String, _ page: Int = 1){
+        keywordsSearchRequest.keywords = keywords
+        keywordsSearchRequest.page = page
+        mapSearch?.aMapPOIKeywordsSearch(keywordsSearchRequest)
+    }
+    func setAroundSearchFooter(){
+        //重置(reset)
+        footer.resetNoMoreData() //恢复为正常footer(防止因之前加载完毕后footer的不可用)
+        
+        footer.setRefreshingTarget(self, refreshingAction: #selector(aroundSearchPullToRefresh))
+    }
+}
+
+// MARK: - 监听
+extension POIVC{
+    @objc private func aroundSearchPullToRefresh(){
+        currentKeywordsPage += 1
+        // 进行关键词搜索
+        makeKeywordsSearch(keywords, currentKeywordsPage)
+        // 最后刷新
+        endRefreshing(currentKeywordsPage)
     }
 }
