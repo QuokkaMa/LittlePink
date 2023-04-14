@@ -69,6 +69,8 @@ extension POIVC: UITableViewDataSource{
         let poi = pois[indexPath.row]
         cell.poi = poi
 
+        if poi[0] == poiName{ cell.accessoryType = .checkmark }
+        
         return cell
     }
 }
@@ -80,7 +82,7 @@ extension POIVC: UITableViewDelegate{
         cell.accessoryType = .checkmark
 
         delegate?.updatePOIName(pois[indexPath.row][0])
-
+        
         dismiss(animated: true)
     }
 }

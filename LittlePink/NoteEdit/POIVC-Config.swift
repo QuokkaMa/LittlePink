@@ -24,5 +24,9 @@ extension POIVC{
         //3.设全局MJRefreshAutoNormalFooter,之后用他的setRefreshingTarget即可添加事件--此举方便自定义header和footer的样式
         tableView.mj_footer = footer
         
+        //searchbar取消按钮一开始不生效的bug
+        if let cancelButton = searchBar.value(forKey: "cancelButton") as? UIButton{
+            cancelButton.isEnabled = true
+        }
     }
 }

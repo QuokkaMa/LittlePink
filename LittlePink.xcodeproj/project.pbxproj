@@ -118,9 +118,9 @@
 				0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */,
 				0FB89D3929E40DA2008D50BC /* POIVC.swift */,
 				0F05A3CF29E54D7C002497A5 /* POIVC-Config.swift */,
-				0F05A3D129E55D4F002497A5 /* POICell.swift */,
 				0F0A8BFC29E68754007911BE /* POIVC-Location.swift */,
 				0F5A4B1829E7F21500C8C8E1 /* POIVC-KeywordsSearch.swift */,
+				0F05A3D129E55D4F002497A5 /* POICell.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
