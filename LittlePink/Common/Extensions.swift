@@ -48,6 +48,17 @@ extension Optional where Wrapped == String{
 
 extension UITextField{
     var unwrappedText: String { text ?? "" }
+    
+    var exactText: String {
+        unwrappedText.isBlank ? "" : unwrappedText
+    }
+}
+
+extension UITextView{
+    var unwrappedText: String { text ?? "" }
+    var exactText: String {
+        unwrappedText.isBlank ? "" : unwrappedText
+    }
 }
 
 extension UIView{

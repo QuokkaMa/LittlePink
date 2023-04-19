@@ -39,8 +39,10 @@ class NoteEditVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         config()
+        
+        print(NSHomeDirectory())
     }
     
     
@@ -75,6 +77,29 @@ class NoteEditVC: UIViewController {
     }
 
     //  存草稿和发布笔记之前需要判断当前用户输入的正文文本数量,是否大于最大可输入数量
+    @IBAction func saveDraftNote(_ sender: Any) {
+        guard textViewIAView.currentTextCount <= kMaxNoteTextCount else {
+            showTextHUD("正文最多输入\(kMaxNoteTextCount)字哦")
+            return
+        }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let draftNote = DraftNote(context: context)
+        draftNote.title = titleTextField.exactText
+        draftNote.text = textView.exactText
+        draftNote.channel = channel
+        draftNote.subChannel = subChannel
+        draftNote.poiName = poiName
+        draftNote.updatedAt = Date()
+        
+        appDelegate.saveContext()
+    }
+    
+    @IBAction func postNote(_ sender: Any) {
+         
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let channelVC = segue.destination as? ChannelVC{
             view.endEditing(true)

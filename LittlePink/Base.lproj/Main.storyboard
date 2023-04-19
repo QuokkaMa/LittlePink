@@ -407,14 +407,54 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="ja6-yB-0yX"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="b6k-r1-kDb"/>
                             </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kHU-wn-qWb">
+                                <rect key="frame" x="16" y="766" width="358" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYb-8p-vQv">
+                                        <rect key="frame" x="0.0" y="0.0" width="63" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="存草稿">
+                                            <color key="titleColor" systemColor="secondaryLabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveDraftNote:" destination="mls-JQ-4VZ" eventType="touchUpInside" id="o4G-R8-zc0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5B-En-Ovy">
+                                        <rect key="frame" x="79" y="0.0" width="279" height="44"/>
+                                        <color key="backgroundColor" name="mainColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="发布笔记">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="postNote:" destination="mls-JQ-4VZ" eventType="touchUpInside" id="k5U-3R-ion"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="db9-1X-8SX"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rnb-JR-4s5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="e1V-zG-e71" firstAttribute="leading" secondItem="Rnb-JR-4s5" secondAttribute="leading" id="4z2-lr-v7z"/>
+                            <constraint firstItem="kHU-wn-qWb" firstAttribute="leading" secondItem="Rnb-JR-4s5" secondAttribute="leading" constant="16" id="61k-5C-Cq2"/>
                             <constraint firstAttribute="bottom" secondItem="e1V-zG-e71" secondAttribute="bottom" id="ABB-Fb-Ny5"/>
                             <constraint firstItem="e1V-zG-e71" firstAttribute="top" secondItem="Rnb-JR-4s5" secondAttribute="top" id="cAU-Mg-Hv4"/>
+                            <constraint firstItem="Rnb-JR-4s5" firstAttribute="trailing" secondItem="kHU-wn-qWb" secondAttribute="trailing" constant="16" id="cMb-Yo-fZf"/>
                             <constraint firstItem="e1V-zG-e71" firstAttribute="trailing" secondItem="Rnb-JR-4s5" secondAttribute="trailing" id="uky-un-l9R"/>
+                            <constraint firstItem="Rnb-JR-4s5" firstAttribute="bottom" secondItem="kHU-wn-qWb" secondAttribute="bottom" id="zOH-k4-C3y"/>
                         </constraints>
                     </view>
                     <connections>
