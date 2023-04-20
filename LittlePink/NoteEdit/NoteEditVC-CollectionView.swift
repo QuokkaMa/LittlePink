@@ -44,7 +44,7 @@ extension NoteEditVC: UICollectionViewDelegate{
         if isVideo {
             // 点击编辑界面的视频,进行预览
             let playerVC = AVPlayerViewController()
-            playerVC.player = AVPlayer(url: videoUrl!)
+            playerVC.player = AVPlayer(url: videoURL!)
             present(playerVC, animated: true){
                 playerVC.player?.play()
             }

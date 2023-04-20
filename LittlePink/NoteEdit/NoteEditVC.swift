@@ -13,8 +13,8 @@ class NoteEditVC: UIViewController {
     var photos = [
         UIImage(named: "1")!,UIImage(named: "2")!
     ]
-    var videoUrl:URL?
-//    var videoUrl:URL = Bundle.main.url(forResource: "testVideo", withExtension: "mp4")!
+//    var videoURL:URL?
+    var videoURL: URL? = Bundle.main.url(forResource: "TV", withExtension: "mp4")
     
     var channel = ""
     var subChannel = ""
@@ -32,7 +32,7 @@ class NoteEditVC: UIViewController {
     @IBOutlet weak var poiNameLabel: UILabel!
     
     var photoCount: Int{ photos.count }
-    var isVideo: Bool{ videoUrl != nil}
+    var isVideo: Bool{ videoURL != nil}
     var textViewIAView: TextViewIAView{ textView.inputAccessoryView as! TextViewIAView }
    
     let locationManager = CLLocationManager()
@@ -42,6 +42,7 @@ class NoteEditVC: UIViewController {
     
         config()
         
+        // 获取模拟器app地址 
         print(NSHomeDirectory())
     }
     
@@ -85,6 +86,20 @@ class NoteEditVC: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let draftNote = DraftNote(context: context)
+        // 视频
+        if isVideo {
+            draftNote.video = try? Data(contentsOf: videoURL!)
+        }
+        // 封面
+        draftNote.coverPhoto = photos[0].jpeg(.high)
+        //所有图片
+        var photos: [Data] = []
+        for photo in self.photos{
+            if let pngData = photo.pngData(){
+                photos.append(pngData)
+            }
+        }
+        draftNote.photos = try? JSONEncoder().encode(photos)
         draftNote.title = titleTextField.exactText
         draftNote.text = textView.exactText
         draftNote.channel = channel
