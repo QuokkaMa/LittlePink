@@ -55,8 +55,13 @@ let persistentContainer = appDelegate.persistentContainer
 let context = persistentContainer.viewContext
 let backgroundContext = persistentContainer.newBackgroundContext()
 
-// MARK: 布局尺寸
+// MARK: - UI布局
+let screenRect = UIScreen.main.bounds
+
+// MARK: - 业务逻辑相关
+//瀑布流
 let kWaterfallPadding: CGFloat = 4
+let kDraftNoteWaterfallCellBottomViewH: CGFloat = 84
 
 // MARK: - 业务逻辑相关
 let kChannels = ["推荐","旅行","娱乐","才艺","美妆","白富美","美食","萌宠"]
