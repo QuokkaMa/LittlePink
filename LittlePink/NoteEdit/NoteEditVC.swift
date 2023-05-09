@@ -83,8 +83,7 @@ class NoteEditVC: UIViewController {
             showTextHUD("正文最多输入\(kMaxNoteTextCount)字哦")
             return
         }
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+
         let draftNote = DraftNote(context: context)
         // 视频
         if isVideo {
@@ -100,6 +99,7 @@ class NoteEditVC: UIViewController {
             }
         }
         draftNote.photos = try? JSONEncoder().encode(photos)
+        draftNote.isVideo = isVideo
         draftNote.title = titleTextField.exactText
         draftNote.text = textView.exactText
         draftNote.channel = channel

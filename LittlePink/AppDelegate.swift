@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         config()
+        
+        print("沙盒根目录,存文件时不建议直接访问根目录") //沙盒根目录,存文件时不建议直接访问根目录
+        print(NSHomeDirectory()) //沙盒根目录,存文件时不建议直接访问根目录
         return true
     }
 

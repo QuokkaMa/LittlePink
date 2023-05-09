@@ -46,7 +46,14 @@ let kCommentSectionFooterViewID = "CommentSectionFooterViewID"
 let mainColor = UIColor(named: "mainColor")!
 let mainLightColor = UIColor(named: "main-light")!
 let blueColor = UIColor(named: "blue")!
+// 默认图片
 let imagePH = UIImage(named: "imagePH")!
+
+// MARK: - CoreData
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let persistentContainer = appDelegate.persistentContainer
+let context = persistentContainer.viewContext
+let backgroundContext = persistentContainer.newBackgroundContext()
 
 // MARK: 布局尺寸
 let kWaterfallPadding: CGFloat = 4

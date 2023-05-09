@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import AVFoundation
+import DateToolsSwift
  
 extension String{
     var isBlank: Bool{ self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
@@ -46,6 +47,30 @@ extension Optional where Wrapped == String{
     var unwrappedText: String { self ?? "" }
 }
 
+extension Date{
+    //本项目5种时间表示方式:
+    //1.刚刚/5分钟前;2.今天21:10;3.昨天21:10;4.09-15;5.2019-09-15
+    var formattedDate: String{
+        let currentYear = Date().year
+        if year == currentYear{//今年
+            if isToday{//今天
+                if minutesAgo > 10{//note发布(或存草稿)超过10分钟即显示'今天xx:xx'
+                    return "今天 \(format(with: "HH:mm"))"
+                }else{
+                    return timeAgoSinceNow
+                }
+            }else if isYesterday{//昨天
+                return "昨天 \(format(with: "HH:mm"))"
+            }else{//前天或更早的时间
+                return format(with: "MM-dd")
+            }
+        }else if year < currentYear{//去年或更早
+            return format(with: "yyyy-MM-dd")
+        }else{
+            return "明年或更远,目前项目暂不会用到"
+        }
+    }
+}
 
 
 extension UIImage{
@@ -53,13 +78,13 @@ extension UIImage{
     //1.指定构造器必须调用它直接父类的指定构造器方法--见FollowVC
     //2.便利构造器必须调用同一个类中定义的其它初始化方法
     //3.便利构造器在最后必须调用一个指定构造器
-//    convenience init?(_ data: Data?) {
-//        if let unwrappedData = data{
-//            self.init(data: unwrappedData)
-//        }else{
-//            return nil
-//        }
-//    }
+    convenience init?(_ data: Data?) {
+        if let unwrappedData = data{ 
+            self.init(data: unwrappedData)
+        }else{
+            return nil
+        }
+    }
     
     enum JPEGQuality: CGFloat {
         case lowest  = 0

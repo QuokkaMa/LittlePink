@@ -10,6 +10,8 @@
 		0F05A3D029E54D7D002497A5 /* POIVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A3CF29E54D7C002497A5 /* POIVC-Config.swift */; };
 		0F05A3D229E55D4F002497A5 /* POICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A3D129E55D4F002497A5 /* POICell.swift */; };
 		0F0A8BFD29E68754007911BE /* POIVC-Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A8BFC29E68754007911BE /* POIVC-Location.swift */; };
+		0F11433B29F1375A0044925E /* WaterfallVC-LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F11433A29F1375A0044925E /* WaterfallVC-LoadData.swift */; };
+		0F11433D29F137790044925E /* WaterfallVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F11433C29F137790044925E /* WaterfallVC-Config.swift */; };
 		0F3E626B29BF15F000D9650B /* PhotoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E626A29BF15F000D9650B /* PhotoFooter.swift */; };
 		0F48681B29EFE81C0001436A /* DraftNoteWaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F48681A29EFE81C0001436A /* DraftNoteWaterfallCell.swift */; };
 		0F5A4B1929E7F21500C8C8E1 /* POIVC-KeywordsSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5A4B1829E7F21500C8C8E1 /* POIVC-KeywordsSearch.swift */; };
@@ -50,6 +52,8 @@
 		0F05A3CF29E54D7C002497A5 /* POIVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-Config.swift"; sourceTree = "<group>"; };
 		0F05A3D129E55D4F002497A5 /* POICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POICell.swift; sourceTree = "<group>"; };
 		0F0A8BFC29E68754007911BE /* POIVC-Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-Location.swift"; sourceTree = "<group>"; };
+		0F11433A29F1375A0044925E /* WaterfallVC-LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-LoadData.swift"; sourceTree = "<group>"; };
+		0F11433C29F137790044925E /* WaterfallVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-Config.swift"; sourceTree = "<group>"; };
 		0F3E626A29BF15F000D9650B /* PhotoFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFooter.swift; sourceTree = "<group>"; };
 		0F48681A29EFE81C0001436A /* DraftNoteWaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftNoteWaterfallCell.swift; sourceTree = "<group>"; };
 		0F5A4B1829E7F21500C8C8E1 /* POIVC-KeywordsSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-KeywordsSearch.swift"; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */,
+				0F11433C29F137790044925E /* WaterfallVC-Config.swift */,
+				0F11433A29F1375A0044925E /* WaterfallVC-LoadData.swift */,
 				0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */,
 				0F48681A29EFE81C0001436A /* DraftNoteWaterfallCell.swift */,
 			);
@@ -350,6 +356,7 @@
 				0F48681B29EFE81C0001436A /* DraftNoteWaterfallCell.swift in Sources */,
 				0F94B73A296BF6BD00D9ED5D /* HomeVC.swift in Sources */,
 				0F71386F299F9CE80071743F /* PhotoCell.swift in Sources */,
+				0F11433B29F1375A0044925E /* WaterfallVC-LoadData.swift in Sources */,
 				0FA5AB35298616EF00DFDEB3 /* TabBarC.swift in Sources */,
 				0FC3EDC0296EAC9400872CCE /* WaterfallVC.swift in Sources */,
 				0FC3EDC2296EB4C200872CCE /* WaterfallCell.swift in Sources */,
@@ -359,6 +366,7 @@
 				0FAE5C7C2966C8E800E3ED39 /* AppDelegate.swift in Sources */,
 				0F94B740296C0D8A00D9ED5D /* NearByVC.swift in Sources */,
 				0F05A3D229E55D4F002497A5 /* POICell.swift in Sources */,
+				0F11433D29F137790044925E /* WaterfallVC-Config.swift in Sources */,
 				0FA5AB37298618CC00DFDEB3 /* PostVC.swift in Sources */,
 				0FAE5C7E2966C8E800E3ED39 /* SceneDelegate.swift in Sources */,
 				0FB89D3329E3AEB8008D50BC /* ChannelVC.swift in Sources */,
