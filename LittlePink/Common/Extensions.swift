@@ -202,3 +202,43 @@ extension Bundle{
     }
 }
  
+
+extension FileManager{
+    //对url添加子路径常用appendingPathComponent,对path添加就直接字符串拼接/插值
+    func save(_ data: Data?, to dirName: String, as fileName: String) -> URL?{
+        guard let data = data else {
+            print("要写入的data为nil")
+            return nil
+        }
+        
+        // MARK: 知识点
+        //1.path转URL,URL转path
+        //2.创建文件夹和文件时都需要先规定URL
+        //3.一般都会使用fileExists先判断文件夹或文件是否存在
+        
+        // MARK: 创建文件夹
+        //"file:///xx/xx/tmp/dirName"
+        //这里的URL(fileURLWithPath: NSTemporaryDirectory())也可使用temporaryDirectory
+        let dirURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(dirName, isDirectory: true)
+        
+        if !fileExists(atPath: dirURL.path){
+            guard let _ = try? createDirectory(at: dirURL, withIntermediateDirectories: true) else {
+                print("创建文件夹失败")
+                return nil
+            }
+        }
+        
+        // MARK: 写入文件
+        //"file:///xx/xx/tmp/dirName/fileName"
+        let fileURL = dirURL.appendingPathComponent(fileName)
+        
+        if !fileExists(atPath: fileURL.path){
+            guard let _ = try? data.write(to: fileURL) else {
+                print("写入/创建文件失败")
+                return nil
+            }
+        }
+        
+        return fileURL
+    }
+}

@@ -9,7 +9,10 @@ import UIKit
 
 
 class NoteEditVC: UIViewController {
-
+    
+    var draftNote: DraftNote?
+    var updateDraftNoteFinished: (() -> ())?
+    
     var photos = [
         UIImage(named: "1")!,UIImage(named: "2")!
     ]
@@ -79,10 +82,8 @@ class NoteEditVC: UIViewController {
 
     //  存草稿和发布笔记之前需要判断当前用户输入的正文文本数量,是否大于最大可输入数量
     @IBAction func saveDraftNote(_ sender: Any) {
-        guard textViewIAView.currentTextCount <= kMaxNoteTextCount else {
-            showTextHUD("正文最多输入\(kMaxNoteTextCount)字哦")
-            return
-        }
+ 
+        isValidateNote()
 
         let draftNote = DraftNote(context: context)
         // 视频

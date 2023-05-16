@@ -79,6 +79,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    //并发队列上的context存储
+    func saveBackgroundContext(){
+        //因可以有多个并发队列的context,故每次persistentContainer.viewContext时都会创建个新的,故不能像上面一样.
+        //这里需用使用同一个并发队列的context(即常量文件夹中引用的那个)
+        if backgroundContext.hasChanges{
+            do {
+                try backgroundContext.save()
+            } catch {
+                fatalError("后台存储数据失败(包括增删改):\(error)")
+            }
+        }
+    }
 
 }
 
