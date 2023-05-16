@@ -44,6 +44,7 @@ class NoteEditVC: UIViewController {
         super.viewDidLoad()
     
         config()
+        setUI()
         
         // 获取模拟器app地址 
         print(NSHomeDirectory())
@@ -112,7 +113,7 @@ class NoteEditVC: UIViewController {
     }
     
     @IBAction func postNote(_ sender: Any) {
-         
+        isValidateNote()
     }
     
     
@@ -157,10 +158,7 @@ extension NoteEditVC: ChannelVCDelegate{
         self.channel = channel
         self.subChannel = subChannel
         //UI
-        channelIcon.tintColor = blueColor
-        channelLabel.text = subChannel
-        channelLabel.textColor = blueColor
-        channelPlaceholderLabel.isHidden = true
+        updateChannelUI()
     }
 }
 
