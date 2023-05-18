@@ -42,6 +42,7 @@
 		0FB89D3629E3B5E1008D50BC /* ChannelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */; };
 		0FB89D3829E3F032008D50BC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB89D3729E3F032008D50BC /* Protocols.swift */; };
 		0FB89D3A29E40DA2008D50BC /* POIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB89D3929E40DA2008D50BC /* POIVC.swift */; };
+		0FB97F4B2A14C031005D82C9 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB97F4A2A14C031005D82C9 /* MeVC.swift */; };
 		0FC3EDBC296C17E900872CCE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDBB296C17E900872CCE /* Constants.swift */; };
 		0FC3EDC0296EAC9400872CCE /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */; };
 		0FC3EDC2296EB4C200872CCE /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */; };
@@ -49,6 +50,7 @@
 		0FE5203D29D590E900DC41E4 /* TV.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0FE5203C29D58F3500DC41E4 /* TV.mp4 */; };
 		0FEF7F8229D6DF5F0057A5E8 /* Pods_LittlePink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2940451015136ED2E68F684 /* Pods_LittlePink.framework */; };
 		0FF0E1452A122E71006B0DC0 /* NoteEditVC-Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF0E1442A122E71006B0DC0 /* NoteEditVC-Helper.swift */; };
+		0FFC14742A137B58008CD7A2 /* NoteEditVC-DraftNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC14732A137B58008CD7A2 /* NoteEditVC-DraftNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,7 @@
 		0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableVC.swift; sourceTree = "<group>"; };
 		0FB89D3729E3F032008D50BC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		0FB89D3929E40DA2008D50BC /* POIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIVC.swift; sourceTree = "<group>"; };
+		0FB97F4A2A14C031005D82C9 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		0FC3EDBB296C17E900872CCE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 		0FE5203829D5389F00DC41E4 /* LittlePink-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LittlePink-Bridging-Header.h"; sourceTree = "<group>"; };
 		0FE5203C29D58F3500DC41E4 /* TV.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TV.mp4; sourceTree = "<group>"; };
 		0FF0E1442A122E71006B0DC0 /* NoteEditVC-Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Helper.swift"; sourceTree = "<group>"; };
+		0FFC14732A137B58008CD7A2 /* NoteEditVC-DraftNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DraftNote.swift"; sourceTree = "<group>"; };
 		4F19BE21A1E8B6425567E0D7 /* Pods-LittlePink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.debug.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.debug.xcconfig"; sourceTree = "<group>"; };
 		85B84C20B7BEE1777CE4557C /* Pods-LittlePink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.release.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.release.xcconfig"; sourceTree = "<group>"; };
 		C2940451015136ED2E68F684 /* Pods_LittlePink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittlePink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,16 +121,17 @@
 		0F3E626C29BF211A00D9650B /* NoteEdit */ = {
 			isa = PBXGroup;
 			children = (
-				0F71386E299F9CE80071743F /* PhotoCell.swift */,
-				0F3E626A29BF15F000D9650B /* PhotoFooter.swift */,
 				0FA5AB3B2989114300DFDEB3 /* NoteEditVC.swift */,
-				0FDE03C829D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift */,
 				0FB5A08129DC275000CF8B35 /* NoteEditVC-CollectionView.swift */,
 				0F6E4EDC29DEBB0700421F33 /* NoteEditVC-Config.swift */,
+				0FDE03C829D6CA1C005D0BFD /* NoteEditVC-DragDrop.swift */,
+				0FFC14732A137B58008CD7A2 /* NoteEditVC-DraftNote.swift */,
 				0FF0E1442A122E71006B0DC0 /* NoteEditVC-Helper.swift */,
 				0F5A4B1A29E801F600C8C8E1 /* NoteEditVC-UI.swift */,
 				0F6E4EDE29DFA63F00421F33 /* TextViewIAView.xib */,
 				0F6E4EE029DFA6B900421F33 /* TextViewIAView.swift */,
+				0F71386E299F9CE80071743F /* PhotoCell.swift */,
+				0F3E626A29BF15F000D9650B /* PhotoFooter.swift */,
 				0FB89D3229E3AEB8008D50BC /* ChannelVC.swift */,
 				0FB89D3529E3B5E1008D50BC /* ChannelTableVC.swift */,
 				0FB89D3929E40DA2008D50BC /* POIVC.swift */,
@@ -181,6 +186,7 @@
 				0FAE5C7B2966C8E800E3ED39 /* AppDelegate.swift */,
 				0FAE5C7D2966C8E800E3ED39 /* SceneDelegate.swift */,
 				0FA5AB34298616EF00DFDEB3 /* TabBarC.swift */,
+				0FB97F4A2A14C031005D82C9 /* MeVC.swift */,
 				0FAE5C812966C8E800E3ED39 /* Main.storyboard */,
 				0FAE5C872966C8E900E3ED39 /* Assets.xcassets */,
 				0FC3EDBE296C197A00872CCE /* Home */,
@@ -213,9 +219,9 @@
 			children = (
 				0FC3EDBF296EAC9400872CCE /* WaterfallVC.swift */,
 				0F11433C29F137790044925E /* WaterfallVC-Config.swift */,
-				0F11433A29F1375A0044925E /* WaterfallVC-LoadData.swift */,
 				0FAE336B2A0B72CA0097E42C /* WaterfallVC-DataSource.swift */,
 				0FAE336D2A0B82210097E42C /* WaterfallVC-Delegate.swift */,
+				0F11433A29F1375A0044925E /* WaterfallVC-LoadData.swift */,
 				0FC3EDC1296EB4C200872CCE /* WaterfallCell.swift */,
 				0F48681A29EFE81C0001436A /* DraftNoteWaterfallCell.swift */,
 			);
@@ -372,8 +378,10 @@
 				0FC3EDC2296EB4C200872CCE /* WaterfallCell.swift in Sources */,
 				0F5A4B1929E7F21500C8C8E1 /* POIVC-KeywordsSearch.swift in Sources */,
 				0F3E626B29BF15F000D9650B /* PhotoFooter.swift in Sources */,
+				0FFC14742A137B58008CD7A2 /* NoteEditVC-DraftNote.swift in Sources */,
 				0FA5AB3C2989114300DFDEB3 /* NoteEditVC.swift in Sources */,
 				0FAE5C7C2966C8E800E3ED39 /* AppDelegate.swift in Sources */,
+				0FB97F4B2A14C031005D82C9 /* MeVC.swift in Sources */,
 				0F94B740296C0D8A00D9ED5D /* NearByVC.swift in Sources */,
 				0FAE336C2A0B72CA0097E42C /* WaterfallVC-DataSource.swift in Sources */,
 				0F05A3D229E55D4F002497A5 /* POICell.swift in Sources */,

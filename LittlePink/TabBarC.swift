@@ -32,6 +32,10 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             config.startOnScreen = .library //一打开就展示相册
             config.screens = [.library, .video, .photo] //依次展示相册，拍视频，拍照页面
             config.maxCameraZoomFactor = kMaxCameraZoomFactor //最大多少倍变焦
+            //拍视频后的剪辑处理
+            //此包会把拍摄的视频往上移,导致下面多出黑色,遂取消剪辑,从tmp文件夹取出原视频并自己制作封面
+            config.showsVideoTrimmer = false
+            
             
             //小红书的照片和视频逻辑:
             //1.照片和视频不可混排,且在相册中多选的视频最后会帮我们合成一个视频(即最终只能有一个视频)
@@ -50,23 +54,30 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             let picker = YPImagePicker(configuration: config)
             
             picker.didFinishPicking { [unowned picker] items, cancelled in
-                
-                if cancelled {
-                    // 用户按了左上角的取消按钮
-                }
-                
-                for item in items {
-                    switch item{
-                    case let .photo(photo):
-                        print(photo)
-                    case .video(let video):
-                        print(video)
+                if cancelled{
+                    picker.dismiss(animated: true)
+                }else{
+                    var photos: [UIImage] = []
+                    var videoURL: URL?
+                    
+                    for item in items {
+                        switch item {
+                        case let .photo(photo):
+                            photos.append(photo.image)
+                        case .video:
+                            //从沙盒的tmp文件夹中找到原视频
+                            let url = URL(fileURLWithPath: "recordedVideoRAW.mov", relativeTo: FileManager.default.temporaryDirectory)
+                            photos.append(url.thumbnail)
+                            videoURL = url
+                        }
                     }
                     
+                    let vc = self.storyboard!.instantiateViewController(identifier: kNoteEditVCID) as! NoteEditVC
+                    vc.photos = photos
+                    vc.videoURL = videoURL
+                    picker.pushViewController(vc, animated: true)
                 }
                 
-
-                picker.dismiss(animated: true)
             }
             present(picker, animated: true)
             

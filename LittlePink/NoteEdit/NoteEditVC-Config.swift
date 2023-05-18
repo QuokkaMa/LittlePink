@@ -15,7 +15,7 @@ extension NoteEditVC{
         // 点击空白处 收回键盘
         hideKeyboardWhenTappedAround()
         // 初始化标题最大数字
-        titleCountLable.text = "\(KMaxNoteTitleCount)"
+        titleCountLable.text = "\(kMaxNoteTitleCount)"
         
         // 设置文本框内边距
         let lineFragmentPadding = textView.textContainer.lineFragmentPadding

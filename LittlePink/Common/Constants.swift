@@ -72,7 +72,7 @@ let kMaxPhotoCount = 9 //picker选择照片时允许用户最多选几张
 let kSpacingBetweenItems: CGFloat = 2
 
 // 笔记
-let KMaxNoteTitleCount = 20
+let kMaxNoteTitleCount = 20
 let kMaxNoteTextCount = 1000
 
 

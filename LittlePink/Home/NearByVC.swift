@@ -10,11 +10,14 @@ import XLPagerTabStrip
 
 class NearByVC: UIViewController, IndicatorInfoProvider {
     
+    lazy private var imageView: UIImageView = {
+        let imageView = UIImageView(frame: CGRect(x: 16, y: 44, width: 300, height: 300))
+        return imageView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        view.addSubview(imageView)
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {

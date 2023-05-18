@@ -24,6 +24,7 @@ extension WaterfallVC {
         if isMyDraft{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kDraftNoteWaterfallCellID, for: indexPath) as! DraftNoteWaterfallCell
             cell.draftNote = draftNotes[indexPath.item]
+            cell.deleteBth.tag = indexPath.item
             cell.deleteBth.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
             return cell
         }else{
@@ -45,6 +46,8 @@ extension WaterfallVC {
             appDelegate.saveBackgroundContext()
             //数据2:内存中的
             self.draftNotes.remove(at: index)
+            
+            //UserDefaults.decrease(kDraftNoteCount)
             
             //UI
             DispatchQueue.main.async {

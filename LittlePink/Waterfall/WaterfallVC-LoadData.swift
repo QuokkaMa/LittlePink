@@ -32,17 +32,15 @@ extension WaterfallVC{
         //访问的某个draftNote下面的属性若已在propertiesToFetch中指定,则访问此属性不会触发Fault,访问其他属性会触发Fault
         request.propertiesToFetch = ["coverPhoto", "title", "updatedAt", "isVideo"]
         
-        self.draftNotes = try! context.fetch(request)
-        
-//        showLoadHUD()
-//        backgroundContext.perform {
-//            if let draftNotes = try? backgroundContext.fetch(request){
-//                self.draftNotes = draftNotes
-//                DispatchQueue.main.async {
-//                    self.collectionView.reloadData()
-//                }
-//            }
-//            self.hideLoadHUD()
-//        }
+        showLoadHUD()
+        backgroundContext.perform {
+            if let draftNotes = try? backgroundContext.fetch(request){
+                self.draftNotes = draftNotes
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+            self.hideLoadHUD()
+        }
     }
 }

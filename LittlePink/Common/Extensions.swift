@@ -20,7 +20,7 @@ extension String{
 //
 //    static func randomString(_ length: Int) -> String{
 //        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-//        return String((0..<length).map{ _ in letters.randomElement()! })
+//        return String((0..<len*-*gth).map{ _ in letters.randomElement()! })
 //    }
 //
 //    //拼接富文本
@@ -72,6 +72,25 @@ extension Date{
     }
 }
 
+
+extension URL{
+    //从视频中生成封面图(了解)
+    var thumbnail: UIImage{
+        let asset = AVAsset(url: self)
+        let assetImgGenerate = AVAssetImageGenerator(asset: asset)
+        assetImgGenerate.appliesPreferredTrackTransform = true
+        //如果视频尺寸确定的话可以用下面这句提高处理性能
+        //assetImgGenerate.maximumSize = CGSize(width,height)
+        let time = CMTimeMakeWithSeconds(1.0, preferredTimescale: 600)
+        do {
+            let img = try assetImgGenerate.copyCGImage(at: time, actualTime: nil)
+            let thumbnail = UIImage(cgImage: img)
+            return thumbnail
+        } catch {
+            return imagePH
+        }
+    }
+}
 
 extension UIImage{
     //初始化构造器三原则:
@@ -154,12 +173,16 @@ extension UIViewController{
     }
     
     // MARK: 提示框 -- 自动隐藏
-    func showTextHUD(_ title: String, _ subTitle: String? = nil){
-        let hud = MBProgressHUD.showAdded(to: view, animated: true)
-        hud.mode = .text  // 不指定的话显示菊花和下面配置的文本
+    func showTextHUD(_ title: String, _ inCurrentView: Bool = true, _ subTitle: String? = nil){
+        var viewToShow = view!
+        if !inCurrentView{
+            viewToShow = UIApplication.shared.windows.last!
+        }
+        let hud = MBProgressHUD.showAdded(to: viewToShow, animated: true)
+        hud.mode = .text //不指定的话显示菊花和下面配置的文本
         hud.label.text = title
         hud.detailsLabel.text = subTitle
-        hud.hide(animated: true,afterDelay: 2)
+        hud.hide(animated: true, afterDelay: 2)
     }
     
     // MARK: - 添加手势 点击空白处 收回键盘

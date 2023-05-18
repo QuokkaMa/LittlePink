@@ -101,5 +101,8 @@ extension AppDelegate{
         //高德
         AMapServices.shared().enableHTTPS = true
         AMapServices.shared().apiKey = kAMapApiKey
+        
+        // UI
+        UINavigationBar.appearance().tintColor = .label
     }
 }

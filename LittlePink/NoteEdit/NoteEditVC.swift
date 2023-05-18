@@ -16,8 +16,8 @@ class NoteEditVC: UIViewController {
     var photos = [
         UIImage(named: "1")!,UIImage(named: "2")!
     ]
-//    var videoURL:URL?
-    var videoURL: URL? = Bundle.main.url(forResource: "TV", withExtension: "mp4")
+    var videoURL:URL?
+//    var videoURL: URL? = Bundle.main.url(forResource: "TV", withExtension: "mp4")
     
     var channel = ""
     var subChannel = ""
@@ -63,53 +63,19 @@ class NoteEditVC: UIViewController {
         // 点击键盘 "完成: 收起小键盘 空方法即可
     }
     
-    @IBAction func TFEditChanged(_ sender: Any) {
-        // 输入文字高亮时, 不减最大输入文字数
-        guard titleTextField.markedTextRange == nil else {return}
-        if titleTextField.unwrappedText.count > kMaxPhotoCount {
-            // 截取字符串
-            titleTextField.text = String(titleTextField.unwrappedText.prefix(KMaxNoteTitleCount))
-            showTextHUD("标题最多输入\(KMaxNoteTitleCount)")
-            // 移动光标位置
-            DispatchQueue.main.async {
-                let end = self.titleTextField.endOfDocument
-                self.titleTextField.selectedTextRange = self.titleTextField.textRange(from: end, to: end)
-            }
-        }
-            
-        titleCountLable.text = "\(KMaxNoteTitleCount - titleTextField.unwrappedText.count)"
-        
-    }
+    @IBAction func TFEditChanged(_ sender: Any) {handleTFEditChanged()}
 
     //  存草稿和发布笔记之前需要判断当前用户输入的正文文本数量,是否大于最大可输入数量
     @IBAction func saveDraftNote(_ sender: Any) {
  
-        isValidateNote()
+        guard isValidateNote() else { return }
 
-        let draftNote = DraftNote(context: context)
-        // 视频
-        if isVideo {
-            draftNote.video = try? Data(contentsOf: videoURL!)
+        if let draftNote = draftNote{
+            updateDraftNote(draftNote)
+        }else{
+            createDraftNote()
         }
-        // 封面
-        draftNote.coverPhoto = photos[0].jpeg(.high)
-        //所有图片
-        var photos: [Data] = []
-        for photo in self.photos{
-            if let pngData = photo.pngData(){
-                photos.append(pngData)
-            }
-        }
-        draftNote.photos = try? JSONEncoder().encode(photos)
-        draftNote.isVideo = isVideo
-        draftNote.title = titleTextField.exactText
-        draftNote.text = textView.exactText
-        draftNote.channel = channel
-        draftNote.subChannel = subChannel
-        draftNote.poiName = poiName
-        draftNote.updatedAt = Date()
         
-        appDelegate.saveContext()
     }
     
     @IBAction func postNote(_ sender: Any) {
