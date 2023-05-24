@@ -19,3 +19,8 @@
 #import <AMapSearchKit/AMapSearchKit.h>
 // 上拉下拉刷新
 #import "MJRefresh.h"
+
+#import "JVERIFICATIONService.h"
+
+//#import <AlipaySDK/AlipaySDK.h>
+//#import "APRSASigner.h"

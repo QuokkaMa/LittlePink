@@ -20,6 +20,8 @@
 		0F6E4EDF29DFA63F00421F33 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E4EDE29DFA63F00421F33 /* TextViewIAView.xib */; };
 		0F6E4EE129DFA6B900421F33 /* TextViewIAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E4EE029DFA6B900421F33 /* TextViewIAView.swift */; };
 		0F71386F299F9CE80071743F /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F71386E299F9CE80071743F /* PhotoCell.swift */; };
+		0F8DD35A2A1B6CD90043783D /* LocalLogin-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8DD3592A1B6CD90043783D /* LocalLogin-Extensions.swift */; };
+		0F92E3062A170D9000493C87 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F92E3052A170D9000493C87 /* LoginVC.swift */; };
 		0F94B73A296BF6BD00D9ED5D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F94B739296BF6BD00D9ED5D /* HomeVC.swift */; };
 		0F94B73C296C0D6800D9ED5D /* FollowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F94B73B296C0D6800D9ED5D /* FollowVC.swift */; };
 		0F94B73E296C0D7B00D9ED5D /* DiscoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F94B73D296C0D7B00D9ED5D /* DiscoveryVC.swift */; };
@@ -27,7 +29,7 @@
 		0FA5AB3129851BD600DFDEB3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0FA5AB3029851BD600DFDEB3 /* README.md */; };
 		0FA5AB35298616EF00DFDEB3 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA5AB34298616EF00DFDEB3 /* TabBarC.swift */; };
 		0FA5AB37298618CC00DFDEB3 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA5AB36298618CC00DFDEB3 /* PostVC.swift */; };
-		0FA5AB392986569700DFDEB3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA5AB382986569700DFDEB3 /* Extensions.swift */; };
+		0FA5AB392986569700DFDEB3 /* System-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA5AB382986569700DFDEB3 /* System-Extensions.swift */; };
 		0FA5AB3C2989114300DFDEB3 /* NoteEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA5AB3B2989114300DFDEB3 /* NoteEditVC.swift */; };
 		0FAE336C2A0B72CA0097E42C /* WaterfallVC-DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAE336B2A0B72CA0097E42C /* WaterfallVC-DataSource.swift */; };
 		0FAE336E2A0B82210097E42C /* WaterfallVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAE336D2A0B82210097E42C /* WaterfallVC-Delegate.swift */; };
@@ -67,6 +69,8 @@
 		0F6E4EDE29DFA63F00421F33 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
 		0F6E4EE029DFA6B900421F33 /* TextViewIAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIAView.swift; sourceTree = "<group>"; };
 		0F71386E299F9CE80071743F /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		0F8DD3592A1B6CD90043783D /* LocalLogin-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalLogin-Extensions.swift"; sourceTree = "<group>"; };
+		0F92E3052A170D9000493C87 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0F94B739296BF6BD00D9ED5D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0F94B73B296C0D6800D9ED5D /* FollowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowVC.swift; sourceTree = "<group>"; };
 		0F94B73D296C0D7B00D9ED5D /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
@@ -75,7 +79,7 @@
 		0FA5AB3329851DF900DFDEB3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0FA5AB34298616EF00DFDEB3 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
 		0FA5AB36298618CC00DFDEB3 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
-		0FA5AB382986569700DFDEB3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0FA5AB382986569700DFDEB3 /* System-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "System-Extensions.swift"; sourceTree = "<group>"; };
 		0FA5AB3B2989114300DFDEB3 /* NoteEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditVC.swift; sourceTree = "<group>"; };
 		0FAE336B2A0B72CA0097E42C /* WaterfallVC-DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-DataSource.swift"; sourceTree = "<group>"; };
 		0FAE336D2A0B82210097E42C /* WaterfallVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-Delegate.swift"; sourceTree = "<group>"; };
@@ -143,11 +147,28 @@
 			path = NoteEdit;
 			sourceTree = "<group>";
 		};
+		0F8DD3582A1B6CBC0043783D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0FA5AB382986569700DFDEB3 /* System-Extensions.swift */,
+				0F8DD3592A1B6CD90043783D /* LocalLogin-Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0F92E3092A170EF400493C87 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0F92E3052A170D9000493C87 /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		0FA5AB2F29851B3200DFDEB3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0F8DD3582A1B6CBC0043783D /* Extensions */,
 				0FC3EDBB296C17E900872CCE /* Constants.swift */,
-				0FA5AB382986569700DFDEB3 /* Extensions.swift */,
 				0FB89D3729E3F032008D50BC /* Protocols.swift */,
 			);
 			path = Common;
@@ -187,6 +208,7 @@
 				0FAE5C7D2966C8E800E3ED39 /* SceneDelegate.swift */,
 				0FA5AB34298616EF00DFDEB3 /* TabBarC.swift */,
 				0FB97F4A2A14C031005D82C9 /* MeVC.swift */,
+				0F92E3092A170EF400493C87 /* Login */,
 				0FAE5C812966C8E800E3ED39 /* Main.storyboard */,
 				0FAE5C872966C8E900E3ED39 /* Assets.xcassets */,
 				0FC3EDBE296C197A00872CCE /* Home */,
@@ -257,6 +279,7 @@
 				0FAE5C752966C8E800E3ED39 /* Frameworks */,
 				0FAE5C762966C8E800E3ED39 /* Resources */,
 				6BA9E814162B5AE00484B7FE /* [CP] Embed Pods Frameworks */,
+				BAA7C99CA6123F97C4022DC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -357,6 +380,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BAA7C99CA6123F97C4022DC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LittlePink/Pods-LittlePink-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LittlePink/Pods-LittlePink-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LittlePink/Pods-LittlePink-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -386,12 +426,14 @@
 				0FAE336C2A0B72CA0097E42C /* WaterfallVC-DataSource.swift in Sources */,
 				0F05A3D229E55D4F002497A5 /* POICell.swift in Sources */,
 				0F11433D29F137790044925E /* WaterfallVC-Config.swift in Sources */,
+				0F8DD35A2A1B6CD90043783D /* LocalLogin-Extensions.swift in Sources */,
+				0F92E3062A170D9000493C87 /* LoginVC.swift in Sources */,
 				0FA5AB37298618CC00DFDEB3 /* PostVC.swift in Sources */,
 				0FAE5C7E2966C8E800E3ED39 /* SceneDelegate.swift in Sources */,
 				0FB89D3329E3AEB8008D50BC /* ChannelVC.swift in Sources */,
 				0F6E4EDD29DEBB0700421F33 /* NoteEditVC-Config.swift in Sources */,
 				0F05A3D029E54D7D002497A5 /* POIVC-Config.swift in Sources */,
-				0FA5AB392986569700DFDEB3 /* Extensions.swift in Sources */,
+				0FA5AB392986569700DFDEB3 /* System-Extensions.swift in Sources */,
 				0F94B73E296C0D7B00D9ED5D /* DiscoveryVC.swift in Sources */,
 				0FAE5C862966C8E800E3ED39 /* LittlePink.xcdatamodeld in Sources */,
 				0F94B73C296C0D6800D9ED5D /* FollowVC.swift in Sources */,

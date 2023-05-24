@@ -32,7 +32,10 @@ target 'LittlePink' do
   pod 'AMapSearch'
   pod 'MJRefresh'
   pod 'DateToolsSwift'
-  
+  pod 'JVerification', '~> 2.6.7'
+  pod 'Alamofire', '~> 5.2'
+  pod 'AlipaySDK-iOS'
+  pod 'LeanCloud'
 end
 
 
