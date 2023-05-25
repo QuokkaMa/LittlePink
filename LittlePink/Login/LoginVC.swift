@@ -37,13 +37,11 @@ class LoginVC: UIViewController {
 
 
     @objc private func login(){
-//        #if targetEnvironment(simulator)
-//        presentCodeLoginVC()
-//        #else
+        #if targetEnvironment(simulator)
+        presentCodeLoginVC()
+        #else
         localLogin()
-//        #endif
+        #endif
     }
     
-
-
 }

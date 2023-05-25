@@ -16,7 +16,6 @@ let kDiscoveryVCID = "DiscoveryVCID"
 let kWaterfallVCID = "WaterfallVCID"
 let kNoteEditVCID = "NoteEditVCID"
 let kChannelTableVCID = "ChannelTableVCID"
-
 let kLoginNaviID = "LoginNaviID"
 let kLoginVCID = "LoginVCID"
 let kMeVCID = "MeVCID"

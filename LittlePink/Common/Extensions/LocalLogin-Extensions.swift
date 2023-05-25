@@ -11,6 +11,7 @@ import Alamofire
 extension UIViewController{
     
     func localLogin(){
+        
         showLoadHUD()
         let config = JVAuthConfig()
         config.appKey = kJAppKey
@@ -19,20 +20,21 @@ extension UIViewController{
                 //预取号（可验证当前运营商网络是否可以进行一键登录操作）--取的手机号为139****1234
                 JVERIFICATIONService.preLogin(5000) { (result) in
                     self.hideLoadHUD()
-                    if let code = result!["code"] as? Int, code == 7000 {
+                    if let result = result, let code = result["code"] as? Int, code == 7000 {
                         //当前设备可使用一键登录
                         self.setLocalLoginUI()
                         self.presentLocalLoginVC()
                         
                     }else{
                         print("当前设备不可使用一键登录")
-//                        self.presentCodeLoginVC()
+                        self.presentCodeLoginVC()
                     }
                 }
-            }else{
+            } else{
+                
                 self.hideLoadHUD()
                 print("初始化一键登录失败")
-//                self.presentCodeLoginVC()
+                self.presentCodeLoginVC()
             }
         }
         JVERIFICATIONService.setup(with: config)
@@ -41,7 +43,7 @@ extension UIViewController{
     // MARK: 弹出一键登录授权页+用户点击登录后
     private func presentLocalLoginVC(){
         JVERIFICATIONService.getAuthorizationWith(self, hide: true, animated: true, timeout: 5*1000, completion: { (result) in
-            if let loginToken = result!["loginToken"] as? String {
+            if let result = result, let loginToken = result["loginToken"] as? String {
                 //一键登录成功
                 JVERIFICATIONService.clearPreLoginCache()
                 
@@ -50,14 +52,16 @@ extension UIViewController{
                 //1.服务器收到后携带此token并调用运营商接口（参考极光REST API）--可用postman模拟发送（注意鉴权和body中发参数）
                 //2.成功则返回被公钥加密后的用户手机号，需在服务端解密（可在公私钥网站解密）得出明文手机号
                 //3.手机号存入数据库等操作后向客户端返回登录成功的信息
-                //self.getEncryptedPhoneNum(loginToken)
+                self.getEncryptedPhoneNum(loginToken)
             }else{
                 print("一键登录失败")//可提示用户UI并指引用户接下来的操作
                 self.otherLogin()
             }
         }) { (type, content) in
             //授权页事件触发回调，根据type事件类型来判断页面上的事件
-            print("一键登录 actionBlock :type = \(type), content = \(content)")
+            if let content = content {
+                print("一键登录 actionBlock :type = \(type), content = \(content)")
+            }
         }
     }
     
@@ -65,25 +69,26 @@ extension UIViewController{
 
 // MARK: - 监听
 extension UIViewController{
-    @objc func otherLogin(){
+    @objc private func otherLogin(){
         JVERIFICATIONService.dismissLoginController(animated: true) {
-//            self.presentCodeLoginVC()
+            self.presentCodeLoginVC()
         }
     }
-    @objc func dismissLocalLoginVC(){
-        //JVERIFICATIONService.dismissLoginController(animated: true, completion: nil )
+    @objc private func dismissLocalLoginVC(){
+        JVERIFICATIONService.dismissLoginController(animated: true, completion: nil)
     }
 }
 
 // MARK: - 一般函数
-//extension UIViewController{
-//    func presentCodeLoginVC(){
-//        let mainSB = UIStoryboard(name: "Main", bundle: nil)
-//        let loginNaviC = mainSB.instantiateViewController(identifier: kLoginNaviID)
-//        loginNaviC.modalPresentationStyle = .fullScreen
-//        present(loginNaviC, animated: true)
-//    }
-//}
+extension UIViewController{
+    func presentCodeLoginVC(){
+        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        let loginNaviC = mainSB.instantiateViewController(identifier: kLoginNaviID)
+        loginNaviC.modalPresentationStyle = .fullScreen
+        present(loginNaviC, animated: true)
+    }
+}
+
 // MARK: - UI
 extension UIViewController{
 
@@ -142,7 +147,7 @@ extension UIViewController{
         
         //隐私协议页面
         config.agreementNavBackgroundColor = mainColor
-        config.agreementNavReturnImage = UIImage(systemName: "chevron.left")!
+        config.agreementNavReturnImage = UIImage(systemName: "chevron.left")
         
         //运行自定义的UI并自定义一个button加到customView上
         JVERIFICATIONService.customUI(with: config){ customView in
